@@ -56,8 +56,8 @@
 }
 
 .card {
-  flex: 0 0 380px;
-  max-width: 380px;
+  flex: 0 0 clamp(260px, 80vw, 380px);
+  max-width: clamp(260px, 80vw, 380px);
   padding: 26px;
   border-radius: var(--radius-lg);
   background: var(--surface);
@@ -121,11 +121,5 @@
   }
   .marquee {
     overflow-x: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .card {
-    flex-basis: 300px;
   }
 }
