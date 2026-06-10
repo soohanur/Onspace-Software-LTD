@@ -27,30 +27,15 @@
   cursor: pointer;
 }
 
-.markerHalo {
-  fill: rgba(56, 189, 248, 0.28);
-  animation: pulse 2.4s ease-out infinite;
-  transform-origin: center;
-}
-
 .markerDot {
   fill: var(--blue-600);
   stroke: #fff;
   stroke-width: 1.5;
+  transition: fill 0.18s ease;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(0.7);
-    opacity: 0.9;
-  }
-  70% {
-    transform: scale(1.7);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+.marker:hover .markerDot {
+  fill: var(--blue-700);
 }
 
 .tooltip {

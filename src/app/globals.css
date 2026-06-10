@@ -52,7 +52,7 @@
   --container: 1324px;
   --container-pad: clamp(16px, 5vw, 40px);
   --nav-height: 72px;
-  --section-gap: clamp(56px, 9vw, 140px);
+  --section-gap: clamp(44px, 6vw, 96px);
 
   /* Type */
   --font-geist: var(--font-geist-sans), "Geist", sans-serif;

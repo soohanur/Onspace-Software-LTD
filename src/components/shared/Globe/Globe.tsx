@@ -79,7 +79,6 @@ const Globe = () => {
                   onMouseLeave={() => setActive(null)}
                   className={styles.marker}
                 >
-                  <circle r={9} className={styles.markerHalo} />
                   <circle r={4} className={styles.markerDot} />
                 </Marker>
               ))}
