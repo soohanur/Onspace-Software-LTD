@@ -92,9 +92,10 @@
 .rotator {
   position: relative;
   display: inline-grid;
+  justify-items: center;
   vertical-align: bottom;
   overflow: hidden;
-  text-align: left;
+  text-align: center;
 }
 
 .rotatorSizer {
@@ -105,7 +106,9 @@
 
 .rotatorWord {
   grid-area: 1 / 1;
+  justify-self: center;
   white-space: nowrap;
+  text-align: center;
   color: var(--blue-600);
   opacity: 0;
   transform: translateY(100%);
