@@ -1,5 +1,4 @@
-import { FiArrowUpRight } from "react-icons/fi";
-import StarBorder from "@/components/reactbits/StarBorder/StarBorder";
+import MagicBento from "@/components/reactbits/MagicBento/MagicBento";
 import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 import { SERVICES } from "@/lib/content";
 import styles from "./Services.module.css";
@@ -24,33 +23,19 @@ const Services = ({ withHeader = true }: ServicesProps) => {
           />
         )}
 
-        <div className={styles.bento}>
-          {SERVICES.map((service) => (
-            <StarBorder
-              key={service.id}
-              as="div"
-              color="#38bdf8"
-              speed="7s"
-              thickness={2}
-              className={`${styles.cell} ${
-                service.span ? styles[service.span] : ""
-              }`}
-            >
-              <div className={styles.cardBody}>
-                <span className={styles.icon}>{service.icon}</span>
-                <div className={styles.cardText}>
-                  <h3 className={styles.title}>{service.title}</h3>
-                  <p className={styles.desc}>{service.description}</p>
-                </div>
-                {service.cta && (
-                  <a href={service.cta.href} className={styles.cardCta}>
-                    {service.cta.label}
-                    <FiArrowUpRight />
-                  </a>
-                )}
-              </div>
-            </StarBorder>
-          ))}
+        <div className={styles.bentoWrap}>
+          <MagicBento
+            cards={SERVICES}
+            glowColor="56, 189, 248"
+            spotlightRadius={320}
+            particleCount={10}
+            enableStars
+            enableSpotlight
+            enableBorderGlow
+            enableTilt
+            enableMagnetism
+            clickEffect
+          />
         </div>
       </div>
     </section>

@@ -11,6 +11,7 @@ export interface Service {
   title: string;
   description: string;
   icon: ReactNode;
+  label: string;
   span?: "wide" | "tall" | "normal";
   cta?: { label: string; href: string };
 }

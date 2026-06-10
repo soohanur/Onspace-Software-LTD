@@ -41,20 +41,22 @@ import type {
 /* ---------------- Services (bento) ---------------- */
 export const SERVICES: Service[] = [
   {
-    id: "software-development",
-    title: "Software Development",
-    description:
-      "End-to-end custom platforms, internal tools and SaaS products engineered for scale and reliability.",
-    icon: <FiCode />,
-    span: "wide",
-  },
-  {
     id: "ai-automation",
     title: "AI Automation Systems",
     description:
       "Agentic workflows, RAG pipelines and LLM integrations that remove manual work from your operations.",
     icon: <FiCpu />,
+    label: "Automate",
     span: "tall",
+  },
+  {
+    id: "software-development",
+    title: "Software Development",
+    description:
+      "End-to-end custom platforms, internal tools and SaaS products engineered for scale and reliability.",
+    icon: <FiCode />,
+    label: "Build",
+    span: "wide",
   },
   {
     id: "web-ecommerce",
@@ -62,6 +64,7 @@ export const SERVICES: Service[] = [
     description:
       "High-converting storefronts and marketing sites built on modern, fast, SEO-ready stacks.",
     icon: <FiShoppingCart />,
+    label: "Commerce",
   },
   {
     id: "mobile-development",
@@ -69,6 +72,7 @@ export const SERVICES: Service[] = [
     description:
       "Native and cross-platform mobile apps with a premium feel on iOS and Android.",
     icon: <FiSmartphone />,
+    label: "Mobile",
   },
   {
     id: "custom-project",
@@ -76,6 +80,7 @@ export const SERVICES: Service[] = [
     description:
       "Have something unique in mind? Tell us the problem and we will architect the solution.",
     icon: <FiSend />,
+    label: "Custom",
     cta: { label: "Submit Request", href: "/contact" },
   },
 ];
