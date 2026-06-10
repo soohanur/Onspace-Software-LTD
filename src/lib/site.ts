@@ -44,8 +44,10 @@ export const COUNTRY_MARKERS: CountryMarker[] = [
   { name: "Singapore", coordinates: [103.8198, 1.3521], clients: 7 },
   { name: "Australia", coordinates: [133.7751, -25.2744], clients: 6 },
   { name: "Canada", coordinates: [-106.3468, 56.1304], clients: 10 },
-  { name: "Bangladesh", coordinates: [90.3563, 23.685], clients: 15 },
-  { name: "India", coordinates: [78.9629, 20.5937], clients: 18 },
+  { name: "Bangladesh", coordinates: [90.3563, 23.685], clients: 56 },
+  { name: "India", coordinates: [78.9629, 20.5937], clients: 0 },
+  { name: "Netherlands", coordinates: [5.2913, 52.1326], clients: 5 },
+  { name: "Malaysia", coordinates: [101.9758, 4.2105], clients: 13 },
   { name: "Brazil", coordinates: [-51.9253, -14.235], clients: 5 },
 ];
 

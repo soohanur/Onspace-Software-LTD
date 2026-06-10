@@ -49,7 +49,7 @@ const Globe = () => {
         <div className={styles.mapWrap}>
           <div className={styles.mapInner}>
             <ComposableMap
-              projectionConfig={{ scale: 147 }}
+              projectionConfig={{ scale: 175 }}
               width={980}
               height={460}
               style={{ width: "100%", height: "auto" }}
