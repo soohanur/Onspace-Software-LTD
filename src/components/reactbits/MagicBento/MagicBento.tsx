@@ -10,7 +10,7 @@ import {
 } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
 import "./MagicBento.css";
 
 const DEFAULT_PARTICLE_COUNT = 12;
@@ -497,15 +497,15 @@ const CardInner = ({ card }: { card: BentoCard }) => (
       {card.icon && <span className="magic-bento-card__icon">{card.icon}</span>}
     </div>
     <div className="magic-bento-card__body">
-      <div className="magic-bento-card__label">{card.label}</div>
       <h3 className="magic-bento-card__title">{card.title}</h3>
       <p className="magic-bento-card__description">{card.description}</p>
-      {card.cta && (
-        <Link href={card.cta.href} className="magic-bento-card__cta">
-          {card.cta.label}
-          <FiArrowUpRight />
-        </Link>
-      )}
+      <Link
+        href={card.cta?.href ?? "/services"}
+        className="magic-bento-card__cta"
+      >
+        Learn more
+        <FiArrowRight />
+      </Link>
     </div>
   </>
 );

@@ -85,16 +85,6 @@
   padding: 22px 26px 26px;
 }
 
-.magic-bento-card__label {
-  display: inline-block;
-  font-size: 0.74rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--blue-600);
-  margin-bottom: 10px;
-}
-
 .magic-bento-card__title {
   font-weight: 700;
   font-size: 1.3rem;
@@ -109,22 +99,24 @@
   color: var(--text-muted);
 }
 
+/* Flat "Learn more" - no background, black text, blue on hover */
 .magic-bento-card__cta {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   margin-top: 18px;
+  padding: 0;
+  background: none;
+  border: none;
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--blue-600);
-  padding: 8px 16px;
-  border-radius: 999px;
-  background: var(--sky-50);
-  transition: background 0.18s ease;
+  color: #000;
+  transition: color 0.18s ease, gap 0.18s ease;
 }
 
 .magic-bento-card__cta:hover {
-  background: var(--sky-100);
+  color: var(--blue-600);
+  gap: 10px;
 }
 
 /* Text auto-hide (optional) */
