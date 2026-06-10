@@ -76,7 +76,10 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  /* clip (not hidden): contains horizontal overflow WITHOUT turning <body>
+     into a scroll container - keeps the viewport scrollable so the sticky
+     navbar's scroll listener (window.scrollY) and position:fixed work. */
+  overflow-x: clip;
 }
 
 a {
