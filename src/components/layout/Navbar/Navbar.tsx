@@ -10,7 +10,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => setScrolled(window.scrollY > 12);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -25,7 +25,10 @@ const Navbar = () => {
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
-      <nav className={`container ${styles.nav}`} aria-label="Primary">
+      <nav
+        className={`${styles.bar} ${scrolled ? styles.barScrolled : ""}`}
+        aria-label="Primary"
+      >
         <a href="#top" className={styles.brand} aria-label={`${SITE.name} home`}>
           <span className={styles.logoMark} aria-hidden="true">
             <span className={styles.logoDot} />
