@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import LogoLoop from "@/components/reactbits/LogoLoop/LogoLoop";
 import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 import { TECH_CATEGORIES } from "@/lib/content";
 import styles from "./TechStack.module.css";
@@ -10,12 +9,6 @@ const TechStack = () => {
   const [activeId, setActiveId] = useState(TECH_CATEGORIES[0].id);
   const active =
     TECH_CATEGORIES.find((c) => c.id === activeId) ?? TECH_CATEGORIES[0];
-
-  const loopLogos = active.items.map((item) => ({
-    node: item.icon,
-    title: item.name,
-    ariaLabel: item.name,
-  }));
 
   return (
     <section className="section" id="tech-stack">
@@ -53,20 +46,6 @@ const TechStack = () => {
                 <span className={styles.chipName}>{item.name}</span>
               </div>
             ))}
-          </div>
-
-          <div className={styles.loop}>
-            <LogoLoop
-              key={active.id}
-              logos={loopLogos}
-              speed={70}
-              direction="left"
-              logoHeight={34}
-              gap={56}
-              fadeOut
-              fadeOutColor="#ffffff"
-              ariaLabel={`${active.label} technologies`}
-            />
           </div>
         </div>
       </div>
