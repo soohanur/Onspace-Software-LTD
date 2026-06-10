@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { GeistSans } from "geist/font/sans";
 import ClickSpark from "@/components/reactbits/ClickSpark/ClickSpark";
+import Navbar from "@/components/layout/Navbar/Navbar";
+import Footer from "@/components/layout/Footer/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -42,7 +44,9 @@ export default function RootLayout({
       <body>
         {/* Full-website click effect, tuned for the white theme */}
         <ClickSpark sparkColor="#38bdf8" sparkSize={10} sparkRadius={16} sparkCount={8} duration={500}>
-          {children}
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
         </ClickSpark>
       </body>
     </html>

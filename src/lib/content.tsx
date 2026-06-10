@@ -76,7 +76,7 @@ export const SERVICES: Service[] = [
     description:
       "Have something unique in mind? Tell us the problem and we will architect the solution.",
     icon: <FiSend />,
-    cta: { label: "Submit Request", href: "#contact" },
+    cta: { label: "Submit Request", href: "/contact" },
   },
 ];
 

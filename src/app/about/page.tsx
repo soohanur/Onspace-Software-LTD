@@ -1,19 +1,20 @@
-import Hero from "@/components/home/Hero/Hero";
-import TrustedBy from "@/components/shared/TrustedBy/TrustedBy";
-import Services from "@/components/services/Services/Services";
+import type { Metadata } from "next";
+import About from "@/components/about/About/About";
 import Globe from "@/components/shared/Globe/Globe";
-import TechStack from "@/components/shared/TechStack/TechStack";
 import Reviews from "@/components/shared/Reviews/Reviews";
 import CtaBand from "@/components/shared/CtaBand/CtaBand";
 
-export default function HomePage() {
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Onspace Software LTD is a custom software development and AI automation agency. Learn what we stand for.",
+};
+
+export default function AboutPage() {
   return (
     <>
-      <Hero />
-      <TrustedBy />
-      <Services />
+      <About lead />
       <Globe />
-      <TechStack />
       <Reviews />
       <section className="section">
         <div className="container">

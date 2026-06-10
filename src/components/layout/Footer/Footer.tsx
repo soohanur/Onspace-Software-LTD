@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FiTwitter, FiLinkedin, FiGithub, FiDribbble } from "react-icons/fi";
 import { NAV_LINKS, SITE } from "@/lib/site";
 import styles from "./Footer.module.css";
@@ -10,19 +11,19 @@ const FOOTER_COLUMNS = [
   {
     title: "Services",
     links: [
-      { label: "Software Development", href: "#services" },
-      { label: "AI Automation Systems", href: "#services" },
-      { label: "Website & E-commerce", href: "#services" },
-      { label: "Mobile Development", href: "#services" },
+      { label: "Software Development", href: "/services" },
+      { label: "AI Automation Systems", href: "/services" },
+      { label: "Website & E-commerce", href: "/services" },
+      { label: "Mobile Development", href: "/services" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { label: "Blogs", href: "#blogs" },
-      { label: "Reviews", href: "#reviews" },
-      { label: "Tech Stack", href: "#tech-stack" },
-      { label: "Contact us", href: "#contact" },
+      { label: "Blogs", href: "/blogs" },
+      { label: "Products", href: "/products" },
+      { label: "About", href: "/about" },
+      { label: "Contact us", href: "/contact" },
     ],
   },
 ];
@@ -33,7 +34,7 @@ const Footer = () => {
       <div className="container">
         <div className={styles.top}>
           <div className={styles.brandCol}>
-            <a href="#top" className={styles.brand}>
+            <Link href="/" className={styles.brand}>
               <span className={styles.logoMark} aria-hidden="true">
                 <span className={styles.logoDot} />
               </span>
@@ -41,7 +42,7 @@ const Footer = () => {
                 {SITE.shortName}
                 <span className={styles.brandAccent}>space</span>
               </span>
-            </a>
+            </Link>
             <p className={styles.blurb}>
               Custom software development and AI automation systems for business,
               enterprise and startup teams.
@@ -69,9 +70,9 @@ const Footer = () => {
                 <ul>
                   {col.links.map((link) => (
                     <li key={link.label}>
-                      <a href={link.href} className={styles.colLink}>
+                      <Link href={link.href} className={styles.colLink}>
                         {link.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

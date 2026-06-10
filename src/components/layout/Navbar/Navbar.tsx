@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FiMenu, FiX } from "react-icons/fi";
 import { NAV_LINKS, SITE } from "@/lib/site";
 import styles from "./Navbar.module.css";
@@ -8,6 +10,7 @@ import styles from "./Navbar.module.css";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => {
@@ -23,6 +26,11 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close the mobile menu whenever the route changes.
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
@@ -30,13 +38,16 @@ const Navbar = () => {
     };
   }, [open]);
 
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
+
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <nav
         className={`${styles.bar} ${scrolled ? styles.barScrolled : ""}`}
         aria-label="Primary"
       >
-        <a href="#top" className={styles.brand} aria-label={`${SITE.name} home`}>
+        <Link href="/" className={styles.brand} aria-label={`${SITE.name} home`}>
           <span className={styles.logoMark} aria-hidden="true">
             <span className={styles.logoDot} />
           </span>
@@ -44,25 +55,28 @@ const Navbar = () => {
             {SITE.shortName}
             <span className={styles.brandAccent}>space</span>
           </span>
-        </a>
+        </Link>
 
         <ul className={styles.menu}>
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
-                className={`${styles.menuLink} ${link.muted ? styles.muted : ""}`}
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={`${styles.menuLink} ${link.muted ? styles.muted : ""} ${
+                  isActive(link.href) ? styles.menuActive : ""
+                }`}
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
         <div className={styles.actions}>
-          <a href="#contact" className="btn btn-primary">
+          <Link href="/contact" className="btn btn-primary">
             Talk to an expert
-          </a>
+          </Link>
         </div>
 
         <button
@@ -80,23 +94,21 @@ const Navbar = () => {
         <ul className={styles.mobileMenu}>
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
-                className={styles.mobileLink}
-                onClick={() => setOpen(false)}
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={`${styles.mobileLink} ${
+                  isActive(link.href) ? styles.menuActive : ""
+                }`}
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
-        <a
-          href="#contact"
-          className="btn btn-primary"
-          onClick={() => setOpen(false)}
-        >
+        <Link href="/contact" className="btn btn-primary">
           Talk to an expert
-        </a>
+        </Link>
       </div>
     </header>
   );

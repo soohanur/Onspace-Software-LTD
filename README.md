@@ -29,32 +29,49 @@ npm run start   # serve the production build
 npm run lint    # eslint
 ```
 
-## Project structure
+## Routes
+
+Multi-page site (App Router). Navbar + Footer live in the root layout and wrap
+every route.
+
+| Route       | Page                                                        |
+| ----------- | ----------------------------------------------------------- |
+| `/`         | Home - Hero, TrustedBy, Services, Globe, TechStack, Reviews, CTA |
+| `/products` | Products grid + TrustedBy + CTA                             |
+| `/services` | Services bento + TechStack + CTA                            |
+| `/about`    | About pillars + Globe + Reviews + CTA                      |
+| `/blogs`    | Blog listing                                                |
+| `/contact`  | Talk-to-an-expert contact form                              |
+
+## Project structure (page-wise)
 
 ```
 src/
   app/
-    layout.tsx          # root layout, Geist font, global ClickSpark effect
-    page.tsx            # landing page section composition
-    globals.css         # design tokens + shared utilities
+    layout.tsx              # root layout: Geist, Navbar, Footer, global ClickSpark
+    page.tsx                # / (home)
+    products/page.tsx
+    services/page.tsx
+    about/page.tsx
+    blogs/page.tsx
+    contact/page.tsx
+    globals.css             # design tokens + shared utilities
   components/
-    reactbits/          # ShapeGrid, LogoLoop, StarBorder, ClickSpark (TS ports)
-    layout/             # Navbar, Footer
-    sections/           # Hero, TrustedBy, Products, Globe, Services,
-                        # TechStack, About, Reviews, Blogs, Contact
-    ui/                 # SectionHeader and other shared primitives
+    reactbits/              # ShapeGrid, LogoLoop, StarBorder, ClickSpark (TS ports)
+    layout/                 # Navbar, Footer
+    home/                   # Hero (+ RotatingText)
+    products/               # Products
+    services/               # Services
+    about/                  # About
+    blogs/                  # Blogs
+    contact/                # Contact
+    shared/                 # cross-page: SectionHeader, PageHeader, CtaBand,
+                            # TrustedBy, Globe, TechStack, Reviews
   lib/
-    site.ts             # site config, nav, countries, about pillars
-    content.tsx         # services, products, tech, reviews, blog data (with icons)
-    types.ts            # shared TypeScript types
+    site.ts                 # site config, nav routes, countries, about pillars
+    content.tsx             # services, products, tech, reviews, blog data (with icons)
+    types.ts                # shared TypeScript types
 ```
-
-## Sections
-
-Navbar - Hero (ShapeGrid bg + rotating word) - Trusted by (LogoLoop) -
-Products &amp; custom CTA - Interactive world map - Services bento (StarBorder) -
-Tech stack tabs - About (interactive pillars) - Reviews - Blogs -
-Talk to an expert - Footer.
 
 ## Notes
 
