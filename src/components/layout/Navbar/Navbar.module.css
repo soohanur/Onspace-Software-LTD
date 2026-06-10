@@ -45,7 +45,8 @@
 .barScrolled {
   max-width: min(1080px, calc(100% - 28px));
   height: 60px;
-  padding-inline: 16px;
+  /* right inset == top/bottom inset around the CTA (pill 60 - control 40)/2 = 10 */
+  padding-inline: 16px 10px;
   border-radius: 999px;
   border-color: rgba(15, 23, 42, 0.08);
   background: rgba(255, 255, 255, 0.72);
@@ -56,7 +57,14 @@
 }
 
 .barScrolled .actions .btn {
-  padding: 9px 16px;
+  height: 40px;
+  padding-block: 0;
+}
+
+/* Mobile toggle inside the pill gets the same 40px height -> equal 10px inset */
+.barScrolled .toggle {
+  width: 40px;
+  height: 40px;
 }
 
 /* ---- Brand ---- */
