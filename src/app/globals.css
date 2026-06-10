@@ -175,11 +175,11 @@ img {
   box-shadow: var(--shadow-glow);
 }
 
-/* Blue button hover - reverse: transparent bg, blue text, blue border */
+/* Blue button hover - transparent bg, black text, faded-black border */
 .btn-primary:hover {
   background: transparent;
-  color: var(--blue-600);
-  border-color: var(--blue-600);
+  color: #000;
+  border-color: rgba(0, 0, 0, 0.4);
   box-shadow: none;
 }
 
@@ -190,11 +190,11 @@ img {
   box-shadow: var(--shadow-sm);
 }
 
-/* White button hover - transparent bg, black text, border unchanged */
+/* White button hover - transparent bg, black text, faded-black border */
 .btn-secondary:hover {
   background: transparent;
   color: #000;
-  border-color: var(--border-strong);
+  border-color: rgba(0, 0, 0, 0.4);
 }
 
 @media (prefers-reduced-motion: reduce) {
