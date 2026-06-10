@@ -23,10 +23,7 @@ const Hero = () => {
       <div className={styles.fade} aria-hidden="true" />
 
       <div className={`container ${styles.inner}`}>
-        <span className={styles.badge}>
-          <span className={styles.badgeDot} />
-          Custom software & AI automation agency
-        </span>
+        <span className={styles.badge}>Custom software & AI automation</span>
 
         <h1 className={styles.title}>
           <span className="text-gradient">AI powered</span>
