@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  max-width: 720px;
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.center :global(.section-subtext) {
+  margin-inline: auto;
+}

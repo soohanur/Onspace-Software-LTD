@@ -1,0 +1,27 @@
+.section {
+  padding-block: clamp(36px, 6vw, 64px);
+  border-bottom: 1px solid var(--border);
+}
+
+.label {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.loop {
+  position: relative;
+  height: 56px;
+  color: var(--text-secondary);
+}
+
+.loop :global(.logoloop__node) {
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.loop :global(.logoloop__item:hover) :global(.logoloop__node) {
+  color: var(--blue-600);
+}

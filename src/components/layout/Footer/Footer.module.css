@@ -1,0 +1,133 @@
+.footer {
+  background: var(--bg-subtle);
+  border-top: 1px solid var(--border);
+  padding-block: clamp(48px, 7vw, 80px) 32px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  gap: 48px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.logoMark {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--blue-600), var(--sky-400));
+}
+
+.logoDot {
+  width: 11px;
+  height: 11px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.brandAccent {
+  color: var(--blue-600);
+}
+
+.blurb {
+  margin-top: 16px;
+  max-width: 320px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  transition: color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+
+.social a:hover {
+  color: var(--blue-600);
+  border-color: var(--sky-400);
+  transform: translateY(-2px);
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.colTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.colLink {
+  display: inline-block;
+  padding-block: 6px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  transition: color 0.18s ease;
+}
+
+.colLink:hover {
+  color: var(--blue-600);
+}
+
+.bottom {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.legal {
+  display: flex;
+  gap: 22px;
+}
+
+.legal a:hover {
+  color: var(--blue-600);
+}
+
+@media (max-width: 860px) {
+  .top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 560px) {
+  .cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
