@@ -1,5 +1,6 @@
-/* MagicBento - adapted to the Onspace white / sky-blue theme.
-   Layout: 5 service cards in a 3-col x 2-row bento (first card spans 2 rows). */
+/* MagicBento - Onspace white / sky-blue theme.
+   "What We Deliver" style: image-topped cards in a 3-col x 2-row bento
+   (first card is the tall feature). Magic effects kept subtle. */
 
 .card-grid {
   display: grid;
@@ -11,17 +12,14 @@
 .magic-bento-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   position: relative;
-  min-height: 200px;
+  min-height: 240px;
   width: 100%;
   max-width: 100%;
-  padding: 26px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
   background: var(--surface);
   box-shadow: var(--shadow-sm);
-  font-weight: 300;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 
@@ -33,50 +31,68 @@
 }
 
 .magic-bento-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   border-color: var(--sky-200);
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08),
-    0 0 28px rgba(var(--glow-color), 0.18);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
 }
 
-.magic-bento-card__header,
-.magic-bento-card__content {
-  display: flex;
+/* ---- Media (illustration) area ---- */
+.magic-bento-card__media {
   position: relative;
-  z-index: 2;
+  flex: 1;
+  min-height: 150px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: linear-gradient(150deg, var(--sky-50) 0%, var(--bg-muted) 100%);
+  border-bottom: 1px solid var(--border);
 }
 
-.magic-bento-card__header {
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.magic-bento-card__label {
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  color: var(--blue-600);
-  padding: 4px 12px;
-  border-radius: 999px;
-  background: var(--sky-50);
+.magic-bento-card__media-glow {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  top: -30%;
+  right: -10%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(var(--glow-color), 0.35),
+    transparent 65%
+  );
+  pointer-events: none;
 }
 
 .magic-bento-card__icon {
+  position: relative;
   display: grid;
   place-items: center;
-  width: 46px;
-  height: 46px;
-  border-radius: 14px;
-  font-size: 1.4rem;
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  font-size: 2rem;
   color: var(--blue-600);
-  background: var(--sky-50);
+  background: rgba(255, 255, 255, 0.7);
   border: 1px solid var(--sky-100);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(4px);
 }
 
-.magic-bento-card__content {
-  flex-direction: column;
-  margin-top: 28px;
+/* ---- Body ---- */
+.magic-bento-card__body {
+  position: relative;
+  z-index: 2;
+  padding: 22px 26px 26px;
+}
+
+.magic-bento-card__label {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--blue-600);
+  margin-bottom: 10px;
 }
 
 .magic-bento-card__title {
@@ -97,7 +113,6 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  align-self: flex-start;
   margin-top: 18px;
   font-size: 0.9rem;
   font-weight: 600;
@@ -136,7 +151,6 @@
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  /* Feature card spans both columns on tablet */
   .magic-bento-card:nth-child(1) {
     grid-column: span 2;
   }
@@ -145,7 +159,7 @@
 @media (min-width: 1024px) {
   .card-grid {
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(210px, 1fr);
+    grid-auto-rows: minmax(240px, 1fr);
   }
   /* Feature card (AI Automation) - tall, left column */
   .magic-bento-card:nth-child(1) {
@@ -154,7 +168,7 @@
   }
 }
 
-/* Border glow effect that follows the cursor */
+/* Border glow effect that follows the cursor - subtle */
 .magic-bento-card--border-glow::after {
   content: "";
   position: absolute;
@@ -162,8 +176,8 @@
   padding: 2px;
   background: radial-gradient(
     var(--glow-radius) circle at var(--glow-x) var(--glow-y),
-    rgba(var(--glow-color), calc(var(--glow-intensity) * 0.7)) 0%,
-    rgba(var(--glow-color), calc(var(--glow-intensity) * 0.3)) 30%,
+    rgba(var(--glow-color), calc(var(--glow-intensity) * 0.4)) 0%,
+    rgba(var(--glow-color), calc(var(--glow-intensity) * 0.18)) 30%,
     transparent 60%
   );
   border-radius: inherit;
@@ -178,24 +192,7 @@
   pointer-events: none;
   opacity: 1;
   transition: opacity 0.3s ease;
-  z-index: 1;
-}
-
-.particle-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.particle::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: rgba(56, 189, 248, 0.2);
-  border-radius: 50%;
-  z-index: -1;
+  z-index: 3;
 }
 
 /* Global spotlight */

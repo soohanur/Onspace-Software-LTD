@@ -22,7 +22,7 @@
 /* ---- The bar / pill ---- */
 .bar {
   width: 100%;
-  max-width: var(--container);
+  max-width: 1600px;
   height: var(--nav-height);
   margin-inline: auto;
   padding-inline: var(--container-pad);
@@ -43,7 +43,7 @@
 }
 
 .barScrolled {
-  max-width: min(1080px, calc(100% - 28px));
+  max-width: min(var(--container), calc(100% - 28px));
   height: 60px;
   /* right inset == top/bottom inset around the CTA (pill 60 - control 40)/2 = 10 */
   padding-inline: 16px 10px;

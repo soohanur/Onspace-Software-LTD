@@ -27,14 +27,13 @@ const Services = ({ withHeader = true }: ServicesProps) => {
           <MagicBento
             cards={SERVICES}
             glowColor="56, 189, 248"
-            spotlightRadius={320}
-            particleCount={10}
-            enableStars
+            spotlightRadius={260}
+            enableStars={false}
             enableSpotlight
             enableBorderGlow
-            enableTilt
-            enableMagnetism
-            clickEffect
+            enableTilt={false}
+            enableMagnetism={false}
+            clickEffect={false}
           />
         </div>
       </div>

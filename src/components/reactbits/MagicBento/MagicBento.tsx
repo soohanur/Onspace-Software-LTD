@@ -439,9 +439,9 @@ const GlobalSpotlight = ({
 
       const targetOpacity =
         minDistance <= proximity
-          ? 0.8
+          ? 0.35
           : minDistance <= fadeDistance
-            ? ((fadeDistance - minDistance) / (fadeDistance - proximity)) * 0.8
+            ? ((fadeDistance - minDistance) / (fadeDistance - proximity)) * 0.35
             : 0;
 
       gsap.to(spotlightRef.current, {
@@ -492,15 +492,12 @@ const useMobileDetection = () => {
 
 const CardInner = ({ card }: { card: BentoCard }) => (
   <>
-    <div className="magic-bento-card__header">
-      <div className="magic-bento-card__label">{card.label}</div>
-      {card.icon && (
-        <span className="magic-bento-card__icon" aria-hidden="true">
-          {card.icon}
-        </span>
-      )}
+    <div className="magic-bento-card__media" aria-hidden="true">
+      <span className="magic-bento-card__media-glow" />
+      {card.icon && <span className="magic-bento-card__icon">{card.icon}</span>}
     </div>
-    <div className="magic-bento-card__content">
+    <div className="magic-bento-card__body">
+      <div className="magic-bento-card__label">{card.label}</div>
       <h3 className="magic-bento-card__title">{card.title}</h3>
       <p className="magic-bento-card__description">{card.description}</p>
       {card.cta && (
