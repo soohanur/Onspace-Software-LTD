@@ -77,5 +77,6 @@
   position: relative;
   height: 48px;
   margin-top: 32px;
+  overflow: hidden;
   color: var(--text-secondary);
 }

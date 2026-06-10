@@ -14,6 +14,7 @@
 .loop {
   position: relative;
   height: 56px;
+  overflow: hidden;
   color: var(--text-secondary);
 }
 
