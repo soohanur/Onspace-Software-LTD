@@ -41,6 +41,13 @@ export interface CountryMarker {
   clients: number;
 }
 
+export type ReviewSource =
+  | "fiverr"
+  | "upwork"
+  | "clutch"
+  | "google"
+  | "linkedin";
+
 export interface Review {
   id: string;
   name: string;
@@ -48,6 +55,7 @@ export interface Review {
   country: string;
   avatar: string;
   body: string;
+  source: ReviewSource;
 }
 
 export interface BlogPost {

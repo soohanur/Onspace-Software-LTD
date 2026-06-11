@@ -1,8 +1,18 @@
-import { FaXTwitter } from "react-icons/fa6";
+import { FaGoogle, FaLinkedinIn } from "react-icons/fa6";
+import { SiFiverr, SiUpwork } from "react-icons/si";
+import { FiStar } from "react-icons/fi";
 import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 import { REVIEWS } from "@/lib/content";
-import type { Review } from "@/lib/types";
+import type { Review, ReviewSource } from "@/lib/types";
 import styles from "./Reviews.module.css";
+
+const SOURCE_ICONS: Record<ReviewSource, React.ReactNode> = {
+  fiverr: <SiFiverr title="Fiverr" />,
+  upwork: <SiUpwork title="Upwork" />,
+  clutch: <FiStar title="Clutch" />,
+  google: <FaGoogle title="Google" />,
+  linkedin: <FaLinkedinIn title="LinkedIn" />,
+};
 
 const ReviewCard = ({ review }: { review: Review }) => (
   <figure className={styles.card}>
@@ -20,7 +30,9 @@ const ReviewCard = ({ review }: { review: Review }) => (
         <span className={styles.handle}>{review.handle}</span>
         <span className={styles.country}>{review.country}</span>
       </span>
-      <FaXTwitter className={styles.x} aria-hidden="true" />
+      <span className={styles.x} aria-label={review.source}>
+        {SOURCE_ICONS[review.source]}
+      </span>
     </figcaption>
     <blockquote className={styles.body}>{review.body}</blockquote>
   </figure>

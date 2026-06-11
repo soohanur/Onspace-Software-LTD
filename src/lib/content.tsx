@@ -294,6 +294,7 @@ export const REVIEWS: Review[] = [
     country: "Bangladesh",
     avatar: "https://randomuser.me/api/portraits/men/75.jpg",
     body: "Onspace built our AI automation platform weeks ahead of schedule. Clean architecture, genuinely scalable.",
+    source: "fiverr",
   },
   {
     id: "r2",
@@ -302,6 +303,7 @@ export const REVIEWS: Review[] = [
     country: "United Kingdom",
     avatar: "https://randomuser.me/api/portraits/women/68.jpg",
     body: "Everything about working with them is next level - the process, the communication, the delivery.",
+    source: "upwork",
   },
   {
     id: "r3",
@@ -310,6 +312,7 @@ export const REVIEWS: Review[] = [
     country: "United States",
     avatar: "https://randomuser.me/api/portraits/men/32.jpg",
     body: "From prototype to production in record time. The 48 hour demo sold our whole leadership team.",
+    source: "clutch",
   },
   {
     id: "r4",
@@ -318,6 +321,7 @@ export const REVIEWS: Review[] = [
     country: "Bangladesh",
     avatar: "https://randomuser.me/api/portraits/women/65.jpg",
     body: "A rare engineering partner from Dhaka to the world. They sweat details most agencies skip entirely.",
+    source: "google",
   },
   {
     id: "r5",
@@ -326,6 +330,7 @@ export const REVIEWS: Review[] = [
     country: "Germany",
     avatar: "https://randomuser.me/api/portraits/men/45.jpg",
     body: "Just discovered what a properly engineered Next.js stack feels like. Fast, clean and SEO ready.",
+    source: "linkedin",
   },
   {
     id: "r6",
@@ -334,6 +339,7 @@ export const REVIEWS: Review[] = [
     country: "UAE",
     avatar: "https://randomuser.me/api/portraits/women/44.jpg",
     body: "They understood our compliance needs immediately and built around them. Really impressed.",
+    source: "fiverr",
   },
   {
     id: "r7",
@@ -342,6 +348,7 @@ export const REVIEWS: Review[] = [
     country: "Singapore",
     avatar: "https://randomuser.me/api/portraits/men/64.jpg",
     body: "The AI workflow they shipped removed 80% of our manual ops. Incredibly well designed systems.",
+    source: "upwork",
   },
   {
     id: "r8",
@@ -350,6 +357,7 @@ export const REVIEWS: Review[] = [
     country: "Australia",
     avatar: "https://randomuser.me/api/portraits/women/47.jpg",
     body: "Premium quality, on-time delivery, and a product our users actually love. Could not ask for more.",
+    source: "clutch",
   },
   {
     id: "r9",
@@ -358,6 +366,7 @@ export const REVIEWS: Review[] = [
     country: "Canada",
     avatar: "https://randomuser.me/api/portraits/men/22.jpg",
     body: "Our mobile app feels world-class now. Clear communication at every single step of the build.",
+    source: "google",
   },
   {
     id: "r10",
@@ -366,6 +375,7 @@ export const REVIEWS: Review[] = [
     country: "Netherlands",
     avatar: "https://randomuser.me/api/portraits/women/26.jpg",
     body: "Sleek, minimal and super reliable work. Clean UI, easy handover, perfect for modern teams.",
+    source: "linkedin",
   },
   {
     id: "r11",
@@ -374,6 +384,7 @@ export const REVIEWS: Review[] = [
     country: "Malaysia",
     avatar: "https://randomuser.me/api/portraits/men/36.jpg",
     body: "Onspace is emerging as the agency to watch this year. The e-commerce build doubled our conversion.",
+    source: "upwork",
   },
   {
     id: "r12",
@@ -382,6 +393,7 @@ export const REVIEWS: Review[] = [
     country: "Bangladesh",
     avatar: "https://randomuser.me/api/portraits/men/85.jpg",
     body: "Scalable architecture, on-time delivery, zero drama. Best engineering partner we have worked with.",
+    source: "google",
   },
 ];
 
