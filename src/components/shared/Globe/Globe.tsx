@@ -35,7 +35,7 @@ const Globe = () => {
     <section className="section" id="globe">
       <div className="container">
         <SectionHeader
-          eyebrow="The clients and countries we work with"
+          eyebrow="Clients worldwide"
           title={
             <>
               Empowering Digital Space
