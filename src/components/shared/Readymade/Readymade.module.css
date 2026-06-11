@@ -19,7 +19,7 @@
 }
 
 .tabActive {
-  background: #000;
+  background: #3e3e3e;
   border-color: transparent;
   color: #fff;
   box-shadow: var(--shadow-glow);
