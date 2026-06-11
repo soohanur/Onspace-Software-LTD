@@ -46,7 +46,7 @@
   max-width: min(var(--container), calc(100% - 28px));
   height: 60px;
   /* right inset == top/bottom inset around the CTA (pill 60 - control 40)/2 = 10 */
-  padding-inline: 16px 10px;
+  padding-inline: 16px 5px;
   border-radius: 999px;
   border-color: rgba(15, 23, 42, 0.08);
   background: rgba(255, 255, 255, 0.72);
