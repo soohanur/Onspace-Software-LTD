@@ -33,9 +33,6 @@
   animation: scroll-right 38s linear infinite;
 }
 
-.marquee:hover .track {
-  animation-play-state: paused;
-}
 
 @keyframes scroll-left {
   from {
