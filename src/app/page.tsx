@@ -15,9 +15,9 @@ export default function HomePage() {
       <TrustedBy />
       <Services />
       <DemoCta />
+      <Readymade />
       <Globe />
       <TechStack />
-      <Readymade />
       <Reviews />
       <section className="section">
         <div className="container">

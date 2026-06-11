@@ -52,7 +52,7 @@
   --container: 1324px;
   --container-pad: clamp(16px, 5vw, 40px);
   --nav-height: 72px;
-  --section-gap: clamp(44px, 6vw, 96px);
+  --section-gap: clamp(36px, 5vw, 72px);
 
   /* Type */
   --font-geist: var(--font-geist-sans), "Geist", sans-serif;
@@ -117,6 +117,12 @@ img {
 
 .section {
   padding-block: var(--section-gap);
+}
+
+/* Alternate section backgrounds: white, fade white, white...
+   Hero stays untouched (it is the first child). */
+main > section:nth-child(even) {
+  background: var(--bg-subtle);
 }
 
 /* ---- Shared typography ---- */
