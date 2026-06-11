@@ -4,6 +4,7 @@ import {
   FiShoppingCart,
   FiSmartphone,
   FiSend,
+  FiBox,
 } from "react-icons/fi";
 import { FaAws } from "react-icons/fa";
 import {
@@ -15,6 +16,7 @@ import {
   SiPython,
   SiPostgresql,
   SiMongodb,
+  SiMysql,
   SiDocker,
   SiKubernetes,
   SiGooglecloud,
@@ -28,6 +30,38 @@ import {
   SiGraphql,
   SiRedis,
   SiGo,
+  SiSupabase,
+  SiSqlite,
+  SiFirebase,
+  SiElasticsearch,
+  SiReplicate,
+  SiOllama,
+  SiLangchain,
+  SiHuggingface,
+  SiGooglegemini,
+  SiAnthropic,
+  SiCrewai,
+  SiVuedotjs,
+  SiJavascript,
+  SiSass,
+  SiNestjs,
+  SiDjango,
+  SiFastapi,
+  SiCloudflare,
+  SiDigitalocean,
+  SiNetlify,
+  SiExpo,
+  SiAndroid,
+  SiApple,
+  SiGithubactions,
+  SiTerraform,
+  SiJenkins,
+  SiNginx,
+  SiAnsible,
+  SiPrometheus,
+  SiGrafana,
+  SiPosthog,
+  SiGoogleanalytics,
 } from "react-icons/si";
 import type {
   Service,
@@ -121,64 +155,120 @@ export const PRODUCTS: ProductCard[] = [
   },
 ];
 
-/* ---------------- Tech Stack (multi-tab moving loop) ---------------- */
+/* ---------------- Tech Stack (multi-tab) ---------------- */
 const t = (name: string, icon: TechItem["icon"]): TechItem => ({ name, icon });
 
+const ANALYTICS: TechItem[] = [
+  t("Google Analytics", <SiGoogleanalytics />),
+  t("PostHog", <SiPosthog />),
+  t("Grafana", <SiGrafana />),
+  t("Prometheus", <SiPrometheus />),
+  t("Elasticsearch", <SiElasticsearch />),
+];
+
+const DEVOPS: TechItem[] = [
+  t("Docker", <SiDocker />),
+  t("Kubernetes", <SiKubernetes />),
+  t("GitHub Actions", <SiGithubactions />),
+  t("Terraform", <SiTerraform />),
+  t("Jenkins", <SiJenkins />),
+  t("Nginx", <SiNginx />),
+  t("Ansible", <SiAnsible />),
+];
+
+const DATABASE: TechItem[] = [
+  t("Supabase", <SiSupabase />),
+  t("SQLite", <SiSqlite />),
+  t("Redis", <SiRedis />),
+  t("PostgreSQL", <SiPostgresql />),
+  t("MySQL", <SiMysql />),
+  t("MongoDB", <SiMongodb />),
+  t("Firebase", <SiFirebase />),
+  t("Elastic", <SiElasticsearch />),
+];
+
+const AI_ML: TechItem[] = [
+  t("Replicate", <SiReplicate />),
+  t("Pinecone", <FiBox />),
+  t("PostgreSQL", <SiPostgresql />),
+  t("OpenAI", <SiOpenai />),
+  t("Ollama", <SiOllama />),
+  t("LangChain", <SiLangchain />),
+  t("Hugging Face", <SiHuggingface />),
+  t("Gemini", <SiGooglegemini />),
+  t("fal", <FiBox />),
+  t("CrewAI", <SiCrewai />),
+  t("Anthropic", <SiAnthropic />),
+  t("TensorFlow", <SiTensorflow />),
+  t("PyTorch", <SiPytorch />),
+];
+
+const CLOUD: TechItem[] = [
+  t("AWS", <FaAws />),
+  t("Google Cloud", <SiGooglecloud />),
+  t("Vercel", <SiVercel />),
+  t("Cloudflare", <SiCloudflare />),
+  t("DigitalOcean", <SiDigitalocean />),
+  t("Netlify", <SiNetlify />),
+];
+
+const MOBILE: TechItem[] = [
+  t("Flutter", <SiFlutter />),
+  t("Swift", <SiSwift />),
+  t("Kotlin", <SiKotlin />),
+  t("React Native", <SiReact />),
+  t("Expo", <SiExpo />),
+  t("Android", <SiAndroid />),
+  t("Apple", <SiApple />),
+];
+
+const BACKEND: TechItem[] = [
+  t("Node.js", <SiNodedotjs />),
+  t("Python", <SiPython />),
+  t("Go", <SiGo />),
+  t("NestJS", <SiNestjs />),
+  t("Django", <SiDjango />),
+  t("FastAPI", <SiFastapi />),
+  t("GraphQL", <SiGraphql />),
+];
+
+const FRONTEND: TechItem[] = [
+  t("React", <SiReact />),
+  t("Next.js", <SiNextdotjs />),
+  t("TypeScript", <SiTypescript />),
+  t("JavaScript", <SiJavascript />),
+  t("Tailwind CSS", <SiTailwindcss />),
+  t("Vue", <SiVuedotjs />),
+  t("Sass", <SiSass />),
+  t("GraphQL", <SiGraphql />),
+];
+
+// "All" - every unique tech across the categories
+const ALL: TechItem[] = Array.from(
+  new Map(
+    [
+      ...FRONTEND,
+      ...BACKEND,
+      ...AI_ML,
+      ...DATABASE,
+      ...DEVOPS,
+      ...CLOUD,
+      ...MOBILE,
+      ...ANALYTICS,
+    ].map((item) => [item.name, item])
+  ).values()
+);
+
 export const TECH_CATEGORIES: TechCategory[] = [
-  {
-    id: "frontend",
-    label: "Frontend",
-    items: [
-      t("React", <SiReact />),
-      t("Next.js", <SiNextdotjs />),
-      t("TypeScript", <SiTypescript />),
-      t("Tailwind CSS", <SiTailwindcss />),
-      t("GraphQL", <SiGraphql />),
-    ],
-  },
-  {
-    id: "backend",
-    label: "Backend",
-    items: [
-      t("Node.js", <SiNodedotjs />),
-      t("Python", <SiPython />),
-      t("Go", <SiGo />),
-      t("PostgreSQL", <SiPostgresql />),
-      t("MongoDB", <SiMongodb />),
-      t("Redis", <SiRedis />),
-    ],
-  },
-  {
-    id: "ai",
-    label: "AI / ML",
-    items: [
-      t("OpenAI", <SiOpenai />),
-      t("TensorFlow", <SiTensorflow />),
-      t("PyTorch", <SiPytorch />),
-      t("Python", <SiPython />),
-    ],
-  },
-  {
-    id: "mobile",
-    label: "Mobile",
-    items: [
-      t("Flutter", <SiFlutter />),
-      t("Swift", <SiSwift />),
-      t("Kotlin", <SiKotlin />),
-      t("React", <SiReact />),
-    ],
-  },
-  {
-    id: "cloud",
-    label: "Cloud & DevOps",
-    items: [
-      t("AWS", <FaAws />),
-      t("Google Cloud", <SiGooglecloud />),
-      t("Vercel", <SiVercel />),
-      t("Docker", <SiDocker />),
-      t("Kubernetes", <SiKubernetes />),
-    ],
-  },
+  { id: "all", label: "All", items: ALL },
+  { id: "analytics", label: "Analytics", items: ANALYTICS },
+  { id: "devops", label: "DevOps", items: DEVOPS },
+  { id: "database", label: "Database", items: DATABASE },
+  { id: "ai", label: "AI", items: AI_ML },
+  { id: "cloud", label: "Cloud", items: CLOUD },
+  { id: "mobile", label: "Mobile", items: MOBILE },
+  { id: "backend", label: "Backend", items: BACKEND },
+  { id: "frontend", label: "Frontend", items: FRONTEND },
 ];
 
 /* ---------------- Trusted-by logos (LogoLoop nodes) ---------------- */

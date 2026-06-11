@@ -61,12 +61,10 @@
 .chipIcon {
   display: grid;
   place-items: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  font-size: 1.2rem;
+  width: 28px;
+  height: 28px;
+  font-size: 1.3rem;
   color: var(--blue-600);
-  background: var(--sky-50);
 }
 
 .chipName {
