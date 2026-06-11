@@ -1,5 +1,5 @@
 import { FaGoogle, FaLinkedinIn } from "react-icons/fa6";
-import { SiFiverr, SiUpwork } from "react-icons/si";
+import { SiUpwork } from "react-icons/si";
 import { FiStar } from "react-icons/fi";
 import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 import { REVIEWS } from "@/lib/content";
@@ -7,7 +7,11 @@ import type { Review, ReviewSource } from "@/lib/types";
 import styles from "./Reviews.module.css";
 
 const SOURCE_ICONS: Record<ReviewSource, React.ReactNode> = {
-  fiverr: <SiFiverr title="Fiverr" />,
+  fiverr: (
+    <span className={styles.fiverrF} title="Fiverr">
+      F
+    </span>
+  ),
   upwork: <SiUpwork title="Upwork" />,
   clutch: <FiStar title="Clutch" />,
   google: <FaGoogle title="Google" />,
