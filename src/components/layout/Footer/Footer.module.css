@@ -94,7 +94,7 @@
 }
 
 .colLink:hover {
-  color: var(--blue-600);
+  color: #000;
 }
 
 .bottom {
@@ -116,7 +116,7 @@
 }
 
 .legal a:hover {
-  color: var(--blue-600);
+  color: #000;
 }
 
 @media (max-width: 860px) {
