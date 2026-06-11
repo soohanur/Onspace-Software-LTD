@@ -26,7 +26,7 @@ const Hero = () => {
         <span className={styles.badge}>Custom software & AI automation</span>
 
         <h1 className={styles.title}>
-          <span className="text-gradient">AI powered</span>
+          <span>AI powered</span>
           <span className={styles.titleLine}>
             Next-gen solutions for&nbsp;
             <RotatingText words={HERO_ROTATING_WORDS} />
