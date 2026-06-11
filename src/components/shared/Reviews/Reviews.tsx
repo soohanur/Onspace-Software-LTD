@@ -9,7 +9,7 @@ import styles from "./Reviews.module.css";
 const SOURCE_ICONS: Record<ReviewSource, React.ReactNode> = {
   fiverr: (
     <span className={styles.fiverrF} title="Fiverr">
-      F
+      fi
     </span>
   ),
   upwork: <SiUpwork title="Upwork" />,
