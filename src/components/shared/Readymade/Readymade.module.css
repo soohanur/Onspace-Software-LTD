@@ -6,21 +6,23 @@
   justify-content: center;
 }
 
+/* Same tab style as the Tech Stack section */
 .tab {
-  padding: 10px 22px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--sky-200);
-  background: var(--sky-50);
-  color: var(--blue-600);
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
   font-size: 0.92rem;
   font-weight: 500;
-  transition: background 0.18s ease, color 0.18s ease;
+  transition: all 0.18s ease;
 }
 
 .tabActive {
   background: var(--primary);
   border-color: transparent;
   color: #fff;
+  box-shadow: var(--shadow-glow);
 }
 
 .grid {
@@ -30,19 +32,20 @@
   gap: 16px;
 }
 
+/* Border-only cards, same treatment as the services bento */
 .card {
   display: flex;
   align-items: flex-start;
   gap: 14px;
   padding: 20px 22px;
   border-radius: var(--radius-sm);
-  background: var(--sky-50);
-  border: 1px solid transparent;
-  transition: border-color 0.18s ease, transform 0.18s ease;
+  background: var(--surface);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .card:hover {
-  border-color: var(--sky-200);
+  border-color: rgba(0, 0, 0, 0.2);
   transform: translateY(-1px);
 }
 
@@ -52,10 +55,8 @@
   flex: 0 0 auto;
   width: 42px;
   height: 42px;
-  border-radius: 10px;
-  font-size: 1.3rem;
-  color: #fff;
-  background: var(--primary);
+  font-size: 1.5rem;
+  color: var(--primary);
 }
 
 .name {
