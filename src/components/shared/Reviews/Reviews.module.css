@@ -1,122 +1,138 @@
-.marquee {
+/* Vertical looping review columns (React Bits "Loved by developers" style,
+   white theme). Loops never pause. */
+
+.columns {
   margin-top: 52px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  height: 560px;
+  overflow: hidden;
   -webkit-mask-image: linear-gradient(
-    to right,
+    to bottom,
     transparent,
-    #000 8%,
-    #000 92%,
+    #000 10%,
+    #000 90%,
     transparent
   );
   mask-image: linear-gradient(
-    to right,
+    to bottom,
     transparent,
-    #000 8%,
-    #000 92%,
+    #000 10%,
+    #000 90%,
     transparent
   );
 }
 
-.track {
+.col {
+  overflow: hidden;
+}
+
+.colTrack {
   display: flex;
-  gap: 20px;
-  width: max-content;
+  flex-direction: column;
+  gap: 18px;
+  animation: scroll-up linear infinite;
 }
 
-.left {
-  animation: scroll-left 38s linear infinite;
+.reverse {
+  animation-name: scroll-down;
 }
 
-.right {
-  animation: scroll-right 38s linear infinite;
-}
-
-
-@keyframes scroll-left {
+@keyframes scroll-up {
   from {
-    transform: translateX(0);
+    transform: translateY(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateY(-50%);
   }
 }
 
-@keyframes scroll-right {
+@keyframes scroll-down {
   from {
-    transform: translateX(-50%);
+    transform: translateY(-50%);
   }
   to {
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
+/* ---- Card ---- */
 .card {
-  flex: 0 0 clamp(260px, 80vw, 380px);
-  max-width: clamp(260px, 80vw, 380px);
-  padding: 26px;
-  border-radius: var(--radius-lg);
+  flex: 0 0 auto;
+  padding: 18px 20px;
+  border-radius: var(--radius-md);
   background: var(--surface);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
 }
 
-.stars {
-  display: flex;
-  gap: 3px;
-  color: #f59e0b;
-}
-
-.star {
-  fill: #f59e0b;
-}
-
-.body {
-  margin-top: 16px;
-  font-size: 1rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-.person {
-  margin-top: 22px;
+.cardTop {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .avatar {
-  width: 44px;
-  height: 44px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(135deg, var(--blue-600), var(--sky-400));
+  object-fit: cover;
 }
 
-.name {
-  display: block;
+.meta {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  flex: 1;
+  min-width: 0;
+}
+
+.handle {
+  font-size: 0.85rem;
   font-weight: 600;
-  font-size: 0.95rem;
   color: var(--text);
 }
 
-.role {
-  display: block;
+.country {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.x {
   font-size: 0.85rem;
   color: var(--text-muted);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .left,
-  .right {
-    animation: none;
+.body {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 860px) {
+  .columns {
+    grid-template-columns: repeat(2, 1fr);
+    height: 480px;
   }
-  .marquee {
-    overflow-x: auto;
+  .col:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .columns {
+    grid-template-columns: 1fr;
+    height: 420px;
+  }
+  .col:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .colTrack {
+    animation: none;
   }
 }

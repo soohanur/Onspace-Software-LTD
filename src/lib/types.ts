@@ -44,10 +44,9 @@ export interface CountryMarker {
 export interface Review {
   id: string;
   name: string;
-  role: string;
-  company: string;
+  handle: string;
+  country: string;
   avatar: string;
-  rating: number;
   body: string;
 }
 

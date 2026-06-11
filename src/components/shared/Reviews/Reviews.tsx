@@ -1,4 +1,4 @@
-import { FiStar } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
 import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 import { REVIEWS } from "@/lib/content";
 import type { Review } from "@/lib/types";
@@ -6,29 +6,51 @@ import styles from "./Reviews.module.css";
 
 const ReviewCard = ({ review }: { review: Review }) => (
   <figure className={styles.card}>
-    <div className={styles.stars} aria-label={`${review.rating} out of 5`}>
-      {Array.from({ length: review.rating }).map((_, i) => (
-        <FiStar key={i} className={styles.star} />
-      ))}
-    </div>
-    <blockquote className={styles.body}>{review.body}</blockquote>
-    <figcaption className={styles.person}>
-      <span className={styles.avatar} aria-hidden="true">
-        {review.avatar}
+    <figcaption className={styles.cardTop}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={review.avatar}
+        alt={review.name}
+        className={styles.avatar}
+        loading="lazy"
+        width={32}
+        height={32}
+      />
+      <span className={styles.meta}>
+        <span className={styles.handle}>{review.handle}</span>
+        <span className={styles.country}>{review.country}</span>
       </span>
-      <span>
-        <span className={styles.name}>{review.name}</span>
-        <span className={styles.role}>
-          {review.role}, {review.company}
-        </span>
-      </span>
+      <FaXTwitter className={styles.x} aria-hidden="true" />
     </figcaption>
+    <blockquote className={styles.body}>{review.body}</blockquote>
   </figure>
 );
 
+const Column = ({
+  reviews,
+  speed,
+  reverse = false,
+}: {
+  reviews: Review[];
+  speed: string;
+  reverse?: boolean;
+}) => (
+  <div className={styles.col}>
+    <div
+      className={`${styles.colTrack} ${reverse ? styles.reverse : ""}`}
+      style={{ animationDuration: speed }}
+    >
+      {[...reviews, ...reviews].map((review, i) => (
+        <ReviewCard key={`${review.id}-${i}`} review={review} />
+      ))}
+    </div>
+  </div>
+);
+
 const Reviews = () => {
-  const rowA = REVIEWS.slice(0, 3);
-  const rowB = REVIEWS.slice(3);
+  const colA = REVIEWS.slice(0, 4);
+  const colB = REVIEWS.slice(4, 8);
+  const colC = REVIEWS.slice(8, 12);
 
   return (
     <section className="section" id="reviews">
@@ -41,20 +63,13 @@ const Reviews = () => {
               <span className="text-gradient">Onspace</span>
             </>
           }
-          subtitle="Real words from the people we have partnered with across products and industries."
+          subtitle="Real words from clients across the countries we work with."
         />
-      </div>
 
-      <div className={styles.marquee} aria-hidden="false">
-        <div className={`${styles.track} ${styles.left}`}>
-          {[...rowA, ...rowA].map((review, i) => (
-            <ReviewCard key={`a-${i}`} review={review} />
-          ))}
-        </div>
-        <div className={`${styles.track} ${styles.right}`}>
-          {[...rowB, ...rowB].map((review, i) => (
-            <ReviewCard key={`b-${i}`} review={review} />
-          ))}
+        <div className={styles.columns}>
+          <Column reviews={colA} speed="42s" />
+          <Column reviews={colB} speed="56s" reverse />
+          <Column reviews={colC} speed="48s" />
         </div>
       </div>
     </section>
