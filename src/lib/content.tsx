@@ -261,14 +261,14 @@ const ALL: TechItem[] = Array.from(
 
 export const TECH_CATEGORIES: TechCategory[] = [
   { id: "all", label: "All", items: ALL },
-  { id: "analytics", label: "Analytics", items: ANALYTICS },
-  { id: "devops", label: "DevOps", items: DEVOPS },
-  { id: "database", label: "Database", items: DATABASE },
-  { id: "ai", label: "AI", items: AI_ML },
-  { id: "cloud", label: "Cloud", items: CLOUD },
-  { id: "mobile", label: "Mobile", items: MOBILE },
   { id: "backend", label: "Backend", items: BACKEND },
   { id: "frontend", label: "Frontend", items: FRONTEND },
+  { id: "mobile", label: "Mobile", items: MOBILE },
+  { id: "ai", label: "AI", items: AI_ML },
+  { id: "database", label: "Database", items: DATABASE },
+  { id: "devops", label: "DevOps", items: DEVOPS },
+  { id: "analytics", label: "Analytics", items: ANALYTICS },
+  { id: "cloud", label: "Cloud", items: CLOUD },
 ];
 
 /* ---------------- Trusted-by logos (LogoLoop nodes) ---------------- */
