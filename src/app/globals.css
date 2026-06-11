@@ -10,20 +10,20 @@
   --bg-muted: #eef4fc;
   --surface: #ffffff;
 
-  /* Brand - sky blue / blue */
-  --sky-50: #f0f9ff;
-  --sky-100: #e0f2fe;
-  --sky-200: #bae6fd;
-  --sky-300: #7dd3fc;
-  --sky-400: #38bdf8;
-  --sky-500: #0ea5e9;
-  --blue-500: #3b82f6;
-  --blue-600: #2563eb;
-  --blue-700: #1d4ed8;
+  /* Brand - sky blue palette (50ABE7, 6CBDE9, 87CEEB, BAE0F3, EDF2FB) */
+  --sky-50: #edf2fb;
+  --sky-100: #edf2fb;
+  --sky-200: #bae0f3;
+  --sky-300: #87ceeb;
+  --sky-400: #6cbde9;
+  --sky-500: #50abe7;
+  --blue-500: #50abe7;
+  --blue-600: #50abe7;
+  --blue-700: #3a96d8;
 
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
-  --accent: #38bdf8;
+  --primary: #50abe7;
+  --primary-hover: #3a96d8;
+  --accent: #6cbde9;
 
   /* Text */
   --text: #0f172a;
@@ -36,11 +36,11 @@
   --border-strong: #cbd5e1;
 
   /* Effects */
-  --ring: rgba(37, 99, 235, 0.18);
+  --ring: rgba(80, 171, 231, 0.25);
   --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
   --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
   --shadow-lg: 0 24px 60px rgba(15, 23, 42, 0.1);
-  --shadow-glow: 0 16px 48px rgba(56, 189, 248, 0.22);
+  --shadow-glow: 0 16px 48px rgba(80, 171, 231, 0.28);
 
   /* Geometry */
   --radius-sm: 8px;
@@ -145,12 +145,9 @@ img {
   max-width: 620px;
 }
 
+/* Accent text - solid palette blue (gradients removed site-wide) */
 .text-gradient {
-  background: linear-gradient(100deg, var(--sky-400), var(--blue-600));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: var(--primary);
 }
 
 /* ---- Shared buttons ---- */
@@ -170,7 +167,7 @@ img {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--blue-600), var(--sky-500));
+  background: var(--primary);
   color: var(--text-on-primary);
   box-shadow: var(--shadow-glow);
 }

@@ -14,8 +14,8 @@ const Hero = () => {
           direction="diagonal"
           speed={0.4}
           squareSize={46}
-          borderColor="#e2eefb"
-          hoverFillColor="#bae6fd"
+          borderColor="#e3eef9"
+          hoverFillColor="#bae0f3"
           shape="square"
           hoverTrailAmount={4}
         />

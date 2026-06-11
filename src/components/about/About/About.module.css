@@ -57,11 +57,7 @@
 
 .highlight {
   position: relative;
-  background: linear-gradient(100deg, var(--sky-400), var(--blue-600));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: var(--primary);
   opacity: 0.45;
   transition: opacity 0.25s ease;
 }

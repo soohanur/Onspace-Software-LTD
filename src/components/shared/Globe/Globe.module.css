@@ -2,7 +2,7 @@
   margin-top: 48px;
   padding: clamp(16px, 3vw, 32px);
   border-radius: var(--radius-xl);
-  background: linear-gradient(180deg, var(--sky-50), var(--surface));
+  background: var(--sky-50);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-md);
 }

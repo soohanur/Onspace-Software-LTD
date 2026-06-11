@@ -4,7 +4,7 @@
   margin-top: 28px;
   padding: clamp(28px, 4vw, 44px);
   border-radius: var(--radius-xl);
-  background: linear-gradient(120deg, #0b1f4d, #123a8a 55%, #0ea5e9);
+  background: var(--primary);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,7 +20,7 @@
   width: 420px;
   height: 420px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.55), transparent 60%);
+  display: none;
   pointer-events: none;
 }
 

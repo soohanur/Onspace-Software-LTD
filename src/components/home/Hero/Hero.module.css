@@ -4,12 +4,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: radial-gradient(
-      1200px 600px at 50% -10%,
-      var(--sky-50),
-      transparent 70%
-    ),
-    var(--bg);
+  background: var(--bg);
   padding-block: clamp(60px, 10vw, 120px);
 }
 

@@ -32,7 +32,7 @@
 .thumb {
   position: relative;
   aspect-ratio: 16 / 9;
-  background: linear-gradient(135deg, var(--sky-100), var(--bg-muted));
+  background: var(--sky-200);
   display: flex;
   align-items: flex-end;
   padding: 16px;
@@ -42,11 +42,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    120px 120px at 80% 20%,
-    rgba(56, 189, 248, 0.35),
-    transparent 70%
-  );
+  display: none;
 }
 
 .thumbTag {

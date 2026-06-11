@@ -8,7 +8,7 @@
   gap: clamp(32px, 5vw, 64px);
   padding: clamp(32px, 5vw, 56px);
   border-radius: var(--radius-xl);
-  background: linear-gradient(180deg, var(--sky-50), var(--surface));
+  background: var(--sky-50);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-md);
   align-items: center;
@@ -115,7 +115,7 @@
   border-radius: 50%;
   font-size: 1.6rem;
   color: #fff;
-  background: linear-gradient(135deg, #16a34a, #22c55e);
+  background: #22c55e;
   margin-bottom: 16px;
 }
 

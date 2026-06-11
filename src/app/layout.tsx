@@ -43,7 +43,7 @@ export default function RootLayout({
     <html lang="en" className={GeistSans.variable}>
       <body>
         {/* Full-website click effect, tuned for the white theme */}
-        <ClickSpark sparkColor="#38bdf8" sparkSize={10} sparkRadius={16} sparkCount={8} duration={500}>
+        <ClickSpark sparkColor="#50abe7" sparkSize={10} sparkRadius={16} sparkCount={8} duration={500}>
           <Navbar />
           <main>{children}</main>
           <Footer />
