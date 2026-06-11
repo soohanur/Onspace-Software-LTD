@@ -26,11 +26,9 @@ const Services = ({ withHeader = true }: ServicesProps) => {
         <div className={styles.bentoWrap}>
           <MagicBento
             cards={SERVICES}
-            glowColor="56, 189, 248"
-            spotlightRadius={260}
             enableStars={false}
-            enableSpotlight
-            enableBorderGlow
+            enableSpotlight={false}
+            enableBorderGlow={false}
             enableTilt={false}
             enableMagnetism={false}
             clickEffect={false}
