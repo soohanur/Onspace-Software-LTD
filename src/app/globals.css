@@ -120,8 +120,8 @@ img {
 }
 
 /* Alternate section backgrounds: white, fade white, white...
-   Hero stays untouched (it is the first child). */
-main > section:nth-child(even) {
+   Starts after the trusted-by strip; hero (1st) and trusted-by (2nd) untouched. */
+main > section:nth-child(2n + 3) {
   background: var(--bg-subtle);
 }
 
