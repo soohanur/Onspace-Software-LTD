@@ -174,7 +174,7 @@ main > section:nth-child(2n + 3) {
 }
 
 .btn-primary {
-  background: var(--primary);
+  background: #000;
   color: var(--text-on-primary);
   box-shadow: var(--shadow-glow);
 }
