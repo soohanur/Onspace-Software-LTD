@@ -71,3 +71,15 @@ export interface AboutPillar {
   prefix: string;
   highlight: string;
 }
+
+export interface ReadymadeProduct {
+  name: string;
+  description: string;
+  icon: ReactNode;
+}
+
+export interface ReadymadeCategory {
+  id: string;
+  label: string;
+  items: ReadymadeProduct[];
+}

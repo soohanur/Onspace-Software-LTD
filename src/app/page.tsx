@@ -4,6 +4,7 @@ import Services from "@/components/services/Services/Services";
 import DemoCta from "@/components/shared/DemoCta/DemoCta";
 import Globe from "@/components/shared/Globe/Globe";
 import TechStack from "@/components/shared/TechStack/TechStack";
+import Readymade from "@/components/shared/Readymade/Readymade";
 import Reviews from "@/components/shared/Reviews/Reviews";
 import CtaBand from "@/components/shared/CtaBand/CtaBand";
 
@@ -16,6 +17,7 @@ export default function HomePage() {
       <DemoCta />
       <Globe />
       <TechStack />
+      <Readymade />
       <Reviews />
       <section className="section">
         <div className="container">

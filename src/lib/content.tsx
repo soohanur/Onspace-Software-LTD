@@ -5,6 +5,26 @@ import {
   FiSmartphone,
   FiSend,
   FiBox,
+  FiBriefcase,
+  FiUsers,
+  FiPackage,
+  FiNavigation,
+  FiTruck,
+  FiTool,
+  FiMessageSquare,
+  FiCalendar,
+  FiBookOpen,
+  FiCoffee,
+  FiHome,
+  FiGrid,
+  FiTag,
+  FiLayers,
+  FiActivity,
+  FiPlusSquare,
+  FiVideo,
+  FiCreditCard,
+  FiDollarSign,
+  FiPieChart,
 } from "react-icons/fi";
 import { FaAws } from "react-icons/fa";
 import {
@@ -70,6 +90,7 @@ import type {
   Review,
   BlogPost,
   TechItem,
+  ReadymadeCategory,
 } from "./types";
 
 /* ---------------- Services (bento) ---------------- */
@@ -425,5 +446,60 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Engineering",
     date: "May 09, 2026",
     readTime: "10 min read",
+  },
+];
+
+/* ---------------- Readymade software solutions (tabbed) ---------------- */
+export const READYMADE_CATEGORIES: ReadymadeCategory[] = [
+  {
+    id: "business",
+    label: "Business",
+    items: [
+      { name: "ERP", description: "Business ERP Solution / Product / Shop / Company Management", icon: <FiBriefcase /> },
+      { name: "HR Manager", description: "Human Resource Management System HR Software (HRMS)", icon: <FiUsers /> },
+      { name: "Wholesale", description: "Inventory Control and Inventory Management System", icon: <FiPackage /> },
+      { name: "Flight Booking", description: "Flight Booking Software", icon: <FiNavigation /> },
+      { name: "VMS", description: "Vehicle Management System", icon: <FiTruck /> },
+      { name: "GMS", description: "Garage Management Software", icon: <FiTool /> },
+      { name: "Innue", description: "Business Live Chat Software", icon: <FiMessageSquare /> },
+      { name: "Bus365", description: "Bus Reservation System", icon: <FiCalendar /> },
+      { name: "Edutask", description: "Online Course Selling Marketplace", icon: <FiBookOpen /> },
+    ],
+  },
+  {
+    id: "hospitality",
+    label: "Hospitality",
+    items: [
+      { name: "RestroPOS", description: "Restaurant POS and Kitchen Order Management", icon: <FiCoffee /> },
+      { name: "StayBook", description: "Hotel Booking and Property Management System", icon: <FiHome /> },
+      { name: "QR Menu", description: "Contactless QR Menu and Table Ordering", icon: <FiGrid /> },
+    ],
+  },
+  {
+    id: "ecommerce",
+    label: "E-Commerce",
+    items: [
+      { name: "ShopKit", description: "Single Vendor E-commerce Storefront", icon: <FiShoppingCart /> },
+      { name: "MarketX", description: "Multi-vendor Marketplace Platform", icon: <FiLayers /> },
+      { name: "RetailPOS", description: "Omnichannel Retail POS System", icon: <FiTag /> },
+    ],
+  },
+  {
+    id: "healthcare",
+    label: "Healthcare",
+    items: [
+      { name: "ClinicCare", description: "Clinic and Hospital Management System", icon: <FiActivity /> },
+      { name: "PharmaSys", description: "Pharmacy Inventory and Billing Software", icon: <FiPlusSquare /> },
+      { name: "TeleMed", description: "Telemedicine and Video Consultation Platform", icon: <FiVideo /> },
+    ],
+  },
+  {
+    id: "fintech",
+    label: "Fintech",
+    items: [
+      { name: "PayFlow", description: "Payment Gateway Integration Suite", icon: <FiCreditCard /> },
+      { name: "LedgerPro", description: "Accounting and Double-entry Ledger System", icon: <FiDollarSign /> },
+      { name: "MicroFin", description: "Microfinance and Loan Management Software", icon: <FiPieChart /> },
+    ],
   },
 ];
