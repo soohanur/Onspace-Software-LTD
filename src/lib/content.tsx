@@ -97,6 +97,7 @@ import type {
 export const SERVICES: Service[] = [
   {
     id: "ai-automation",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=80",
     title: "AI Automation Systems",
     description:
       "Agentic workflows, RAG pipelines and LLM integrations that remove manual work from your operations.",
@@ -106,6 +107,7 @@ export const SERVICES: Service[] = [
   },
   {
     id: "software-development",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=900&q=80",
     title: "Software Development",
     description:
       "End-to-end custom platforms, internal tools and SaaS products engineered for scale and reliability.",
@@ -115,6 +117,7 @@ export const SERVICES: Service[] = [
   },
   {
     id: "web-ecommerce",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=900&q=80",
     title: "Website & E-commerce",
     description:
       "High-converting storefronts and marketing sites built on modern, fast, SEO-ready stacks.",
@@ -123,6 +126,7 @@ export const SERVICES: Service[] = [
   },
   {
     id: "mobile-development",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&q=80",
     title: "Mobile Development",
     description:
       "Native and cross-platform mobile apps with a premium feel on iOS and Android.",
@@ -131,6 +135,7 @@ export const SERVICES: Service[] = [
   },
   {
     id: "custom-project",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80",
     title: "Custom Project",
     description:
       "Have something unique in mind? Tell us the problem and we will architect the solution.",

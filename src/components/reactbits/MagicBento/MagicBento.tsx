@@ -24,6 +24,7 @@ export interface BentoCard {
   description: string;
   label: string;
   icon?: ReactNode;
+  image?: string;
   cta?: { label: string; href: string };
 }
 
@@ -493,8 +494,19 @@ const useMobileDetection = () => {
 const CardInner = ({ card }: { card: BentoCard }) => (
   <>
     <div className="magic-bento-card__media" aria-hidden="true">
-      <span className="magic-bento-card__media-glow" />
-      {card.icon && <span className="magic-bento-card__icon">{card.icon}</span>}
+      {card.image ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={card.image}
+          alt={card.title}
+          className="magic-bento-card__image"
+          loading="lazy"
+        />
+      ) : (
+        card.icon && (
+          <span className="magic-bento-card__icon">{card.icon}</span>
+        )
+      )}
     </div>
     <div className="magic-bento-card__body">
       <h3 className="magic-bento-card__title">{card.title}</h3>

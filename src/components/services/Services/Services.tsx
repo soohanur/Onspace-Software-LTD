@@ -13,7 +13,7 @@ const Services = ({ withHeader = true }: ServicesProps) => {
       <div className="container">
         {withHeader && (
           <SectionHeader
-            eyebrow="Flexible & Futuristic"
+            eyebrow="Our Services"
             title={
               <>
                 Solutions <span className="text-gradient">Tailored for You</span>

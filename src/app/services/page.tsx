@@ -14,7 +14,7 @@ export default function ServicesPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Flexible & Futuristic"
+        eyebrow="Our Services"
         title={
           <>
             Solutions <span className="text-gradient">Tailored for You</span>
