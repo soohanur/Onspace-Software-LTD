@@ -33,11 +33,6 @@ const Hero = () => {
           </span>
         </h1>
 
-        <p className={styles.subtitle}>
-          Onspace Software LTD builds and ships premium software solutions and AI
-          automation systems - clean, scalable and delivered on time.
-        </p>
-
         <div className={styles.actions}>
           <Link href="/contact" className="btn btn-primary">
             Get your custom demo

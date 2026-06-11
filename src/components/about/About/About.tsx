@@ -26,10 +26,6 @@ const About = ({ lead = false }: AboutProps) => {
               <br />
               built on what we stand for.
             </h2>
-            <p className="section-subtext">
-              {SITE.shortName} is a custom software development agency building
-              software solutions and AI automation systems for ambitious teams.
-            </p>
           </div>
 
           <ul className={styles.pillars}>

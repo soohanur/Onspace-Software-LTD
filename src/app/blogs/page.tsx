@@ -14,7 +14,6 @@ export default function BlogsPage() {
       <PageHeader
         eyebrow="From the blog"
         title="Ideas, engineering & playbooks"
-        subtitle="Notes from the team on building production software and AI systems."
       />
       <Blogs withHeader={false} />
     </>

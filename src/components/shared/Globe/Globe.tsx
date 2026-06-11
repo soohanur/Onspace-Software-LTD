@@ -43,7 +43,6 @@ const Globe = () => {
               <span className="text-gradient">Across the Globe</span>
             </>
           }
-          subtitle="Hover the map to explore where Onspace has delivered software and AI automation projects."
         />
 
         <div className={styles.mapWrap}>

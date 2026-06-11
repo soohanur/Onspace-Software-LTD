@@ -21,7 +21,6 @@ const TechStack = () => {
               <span className="text-gradient">Modern Tech Stacks</span>
             </>
           }
-          subtitle="Pick a layer to see the tools we reach for. Battle-tested, well-supported and chosen for the job."
         />
 
         <div className={styles.tabs} role="tablist" aria-label="Tech categories">

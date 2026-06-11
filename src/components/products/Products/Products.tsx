@@ -20,7 +20,6 @@ const Products = ({ withHeader = true }: ProductsProps) => {
                 industries
               </>
             }
-            subtitle="Battle-tested platforms we have built and shipped - adaptable to your domain, your data and your team."
           />
         )}
 

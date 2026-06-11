@@ -19,7 +19,6 @@ const Services = ({ withHeader = true }: ServicesProps) => {
                 Solutions <span className="text-gradient">Tailored for You</span>
               </>
             }
-            subtitle="A full-stack agency partner - from first prototype to production scale, across every layer of your product."
           />
         )}
 

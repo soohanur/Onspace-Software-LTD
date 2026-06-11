@@ -79,7 +79,6 @@ const Reviews = () => {
               <span className="text-gradient">Onspace</span>
             </>
           }
-          subtitle="Real words from clients across the countries we work with."
         />
 
         <div className={styles.columns}>

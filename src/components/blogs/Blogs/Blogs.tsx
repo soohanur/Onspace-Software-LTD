@@ -17,7 +17,6 @@ const Blogs = ({ withHeader = true }: BlogsProps) => {
               align="left"
               eyebrow="From the blog"
               title="Ideas, engineering & playbooks"
-              subtitle="Notes from the team on building production software and AI systems."
             />
             <a href="/blogs" className="btn btn-secondary">
               View all posts
