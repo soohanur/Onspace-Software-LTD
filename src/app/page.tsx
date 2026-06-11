@@ -1,6 +1,7 @@
 import Hero from "@/components/home/Hero/Hero";
 import TrustedBy from "@/components/shared/TrustedBy/TrustedBy";
 import Services from "@/components/services/Services/Services";
+import DemoCta from "@/components/shared/DemoCta/DemoCta";
 import Globe from "@/components/shared/Globe/Globe";
 import TechStack from "@/components/shared/TechStack/TechStack";
 import Reviews from "@/components/shared/Reviews/Reviews";
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Hero />
       <TrustedBy />
       <Services />
+      <DemoCta />
       <Globe />
       <TechStack />
       <Reviews />
