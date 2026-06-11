@@ -182,91 +182,98 @@ export const PRODUCTS: ProductCard[] = [
 ];
 
 /* ---------------- Tech Stack (multi-tab) ---------------- */
-const t = (name: string, icon: TechItem["icon"]): TechItem => ({ name, icon });
+const t = (
+  name: string,
+  icon: TechItem["icon"],
+  color?: string
+): TechItem => ({
+  name,
+  icon: color ? <span style={{ color }}>{icon}</span> : icon,
+});
 
 const ANALYTICS: TechItem[] = [
-  t("Google Analytics", <SiGoogleanalytics />),
-  t("PostHog", <SiPosthog />),
-  t("Grafana", <SiGrafana />),
-  t("Prometheus", <SiPrometheus />),
-  t("Elasticsearch", <SiElasticsearch />),
+  t("Google Analytics", <SiGoogleanalytics />, "#E37400"),
+  t("PostHog", <SiPosthog />, "#1D4AFF"),
+  t("Grafana", <SiGrafana />, "#F46800"),
+  t("Prometheus", <SiPrometheus />, "#E6522C"),
+  t("Elasticsearch", <SiElasticsearch />, "#005571"),
 ];
 
 const DEVOPS: TechItem[] = [
-  t("Docker", <SiDocker />),
-  t("Kubernetes", <SiKubernetes />),
-  t("GitHub Actions", <SiGithubactions />),
-  t("Terraform", <SiTerraform />),
-  t("Jenkins", <SiJenkins />),
-  t("Nginx", <SiNginx />),
-  t("Ansible", <SiAnsible />),
+  t("Docker", <SiDocker />, "#2496ED"),
+  t("Kubernetes", <SiKubernetes />, "#326CE5"),
+  t("GitHub Actions", <SiGithubactions />, "#2088FF"),
+  t("Terraform", <SiTerraform />, "#844FBA"),
+  t("Jenkins", <SiJenkins />, "#D24939"),
+  t("Nginx", <SiNginx />, "#009639"),
+  t("Ansible", <SiAnsible />, "#EE0000"),
 ];
 
 const DATABASE: TechItem[] = [
-  t("Supabase", <SiSupabase />),
-  t("SQLite", <SiSqlite />),
-  t("Redis", <SiRedis />),
-  t("PostgreSQL", <SiPostgresql />),
-  t("MySQL", <SiMysql />),
-  t("MongoDB", <SiMongodb />),
-  t("Firebase", <SiFirebase />),
-  t("Elastic", <SiElasticsearch />),
+  t("Supabase", <SiSupabase />, "#3FCF8E"),
+  t("SQLite", <SiSqlite />, "#003B57"),
+  t("Redis", <SiRedis />, "#FF4438"),
+  t("PostgreSQL", <SiPostgresql />, "#4169E1"),
+  t("MySQL", <SiMysql />, "#4479A1"),
+  t("MongoDB", <SiMongodb />, "#47A248"),
+  t("Firebase", <SiFirebase />, "#DD2C00"),
+  t("Elastic", <SiElasticsearch />, "#005571"),
 ];
 
 const AI_ML: TechItem[] = [
-  t("Replicate", <SiReplicate />),
-  t("Pinecone", <FiBox />),
-  t("PostgreSQL", <SiPostgresql />),
-  t("OpenAI", <SiOpenai />),
-  t("Ollama", <SiOllama />),
-  t("LangChain", <SiLangchain />),
-  t("Hugging Face", <SiHuggingface />),
-  t("Gemini", <SiGooglegemini />),
-  t("fal", <FiBox />),
-  t("CrewAI", <SiCrewai />),
-  t("Anthropic", <SiAnthropic />),
-  t("TensorFlow", <SiTensorflow />),
-  t("PyTorch", <SiPytorch />),
+  t("Replicate", <SiReplicate />, "#000000"),
+  t("Pinecone", <FiBox />, "#334155"),
+  t("PostgreSQL", <SiPostgresql />, "#4169E1"),
+  t("OpenAI", <SiOpenai />, "#412991"),
+  t("Ollama", <SiOllama />, "#000000"),
+  t("LangChain", <SiLangchain />, "#1C3C3C"),
+  t("Hugging Face", <SiHuggingface />, "#FFD21E"),
+  t("Gemini", <SiGooglegemini />, "#8E75B2"),
+  t("fal", <FiBox />, "#334155"),
+  t("CrewAI", <SiCrewai />, "#FF5A50"),
+  t("Anthropic", <SiAnthropic />, "#191919"),
+  t("TensorFlow", <SiTensorflow />, "#FF6F00"),
+  t("PyTorch", <SiPytorch />, "#EE4C2C"),
 ];
 
 const CLOUD: TechItem[] = [
-  t("AWS", <FaAws />),
-  t("Google Cloud", <SiGooglecloud />),
-  t("Vercel", <SiVercel />),
-  t("Cloudflare", <SiCloudflare />),
-  t("DigitalOcean", <SiDigitalocean />),
-  t("Netlify", <SiNetlify />),
+  t("AWS", <FaAws />, "#FF9900"),
+  t("Google Cloud", <SiGooglecloud />, "#4285F4"),
+  t("Vercel", <SiVercel />, "#000000"),
+  t("Cloudflare", <SiCloudflare />, "#F38020"),
+  t("DigitalOcean", <SiDigitalocean />, "#0080FF"),
+  t("Netlify", <SiNetlify />, "#00C7B7"),
 ];
 
 const MOBILE: TechItem[] = [
-  t("Flutter", <SiFlutter />),
-  t("Swift", <SiSwift />),
-  t("Kotlin", <SiKotlin />),
-  t("React Native", <SiReact />),
-  t("Expo", <SiExpo />),
-  t("Android", <SiAndroid />),
-  t("Apple", <SiApple />),
+  t("Flutter", <SiFlutter />, "#02569B"),
+  t("Swift", <SiSwift />, "#F05138"),
+  t("Kotlin", <SiKotlin />, "#7F52FF"),
+  t("React Native", <SiReact />, "#61DAFB"),
+  t("Expo", <SiExpo />, "#000020"),
+  t("Android", <SiAndroid />, "#3DDC84"),
+  t("Apple", <SiApple />, "#000000"),
 ];
 
 const BACKEND: TechItem[] = [
-  t("Node.js", <SiNodedotjs />),
-  t("Python", <SiPython />),
-  t("Go", <SiGo />),
-  t("NestJS", <SiNestjs />),
-  t("Django", <SiDjango />),
-  t("FastAPI", <SiFastapi />),
-  t("GraphQL", <SiGraphql />),
+  t("Node.js", <SiNodedotjs />, "#5FA04E"),
+  t("Python", <SiPython />, "#3776AB"),
+  t("Go", <SiGo />, "#00ADD8"),
+  t("NestJS", <SiNestjs />, "#E0234E"),
+  t("Django", <SiDjango />, "#092E20"),
+  t("FastAPI", <SiFastapi />, "#009688"),
+  t("GraphQL", <SiGraphql />, "#E10098"),
 ];
 
 const FRONTEND: TechItem[] = [
-  t("React", <SiReact />),
-  t("Next.js", <SiNextdotjs />),
-  t("TypeScript", <SiTypescript />),
-  t("JavaScript", <SiJavascript />),
-  t("Tailwind CSS", <SiTailwindcss />),
-  t("Vue", <SiVuedotjs />),
-  t("Sass", <SiSass />),
-  t("GraphQL", <SiGraphql />),
+  t("React", <SiReact />, "#61DAFB"),
+  t("Next.js", <SiNextdotjs />, "#000000"),
+  t("TypeScript", <SiTypescript />, "#3178C6"),
+  t("JavaScript", <SiJavascript />, "#F7DF1E"),
+  t("Tailwind CSS", <SiTailwindcss />, "#06B6D4"),
+  t("Vue", <SiVuedotjs />, "#4FC08D"),
+  t("Sass", <SiSass />, "#CC6699"),
+  t("GraphQL", <SiGraphql />, "#E10098"),
 ];
 
 // "All" - every unique tech across the categories
