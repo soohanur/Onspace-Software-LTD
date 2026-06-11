@@ -72,7 +72,7 @@ const Reviews = () => {
     <section className="section" id="reviews">
       <div className="container">
         <SectionHeader
-          eyebrow="Client"
+          eyebrow="Client Feedback"
           title={
             <>
               Teams ship faster with{" "}
