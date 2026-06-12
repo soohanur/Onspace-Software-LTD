@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FiArrowRight, FiClock } from "react-icons/fi";
 import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 import { BLOG_POSTS } from "@/lib/content";
@@ -27,7 +28,11 @@ const Blogs = ({ withHeader = true }: BlogsProps) => {
 
         <div className={styles.grid}>
           {BLOG_POSTS.map((post) => (
-            <article key={post.id} className={styles.card}>
+            <Link
+              key={post.id}
+              href={`/blogs/${post.slug}`}
+              className={styles.card}
+            >
               <div className={styles.thumb} aria-hidden="true">
                 <span className={styles.thumbTag}>{post.category}</span>
               </div>
@@ -42,7 +47,7 @@ const Blogs = ({ withHeader = true }: BlogsProps) => {
                   </span>
                 </div>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

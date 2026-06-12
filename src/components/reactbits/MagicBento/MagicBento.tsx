@@ -512,7 +512,7 @@ const CardInner = ({ card }: { card: BentoCard }) => (
       <h3 className="magic-bento-card__title">{card.title}</h3>
       <p className="magic-bento-card__description">{card.description}</p>
       <Link
-        href={card.cta?.href ?? "/services"}
+        href={card.cta?.href ?? `/services/${card.id}`}
         className="magic-bento-card__cta"
       >
         Learn more

@@ -434,6 +434,7 @@ export const REVIEWS: Review[] = [
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: "b1",
+    slug: "building-production-grade-ai-agents",
     title: "Building Production-Grade AI Agents in 2026",
     excerpt:
       "A practical look at agentic architectures, guardrails and evaluation strategies for real workloads.",
@@ -443,6 +444,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: "b2",
+    slug: "idea-to-prototype-48-hours",
     title: "From Idea to High-Fidelity Prototype in 48 Hours",
     excerpt:
       "How we compress discovery and design into a tight, validated build sprint for our clients.",
@@ -452,6 +454,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: "b3",
+    slug: "scaling-nextjs-enterprise-traffic",
     title: "Scaling Next.js for Enterprise Traffic",
     excerpt:
       "Caching, edge rendering and architecture patterns that keep large apps fast under load.",

@@ -61,11 +61,45 @@ export interface Review {
 
 export interface BlogPost {
   id: string;
+  slug: string;
   title: string;
   excerpt: string;
   category: string;
   date: string;
   readTime: string;
+}
+
+/* ---- Detail-page content ---- */
+export interface DetailFeature {
+  title: string;
+  description: string;
+  icon: ReactNode;
+}
+
+export interface ServiceDetail {
+  id: string; // matches Service.id
+  tagline: string;
+  intro: string[];
+  features: DetailFeature[];
+  deliverables: string[];
+}
+
+export interface ProductDetail {
+  id: string; // matches ProductCard.id
+  tagline: string;
+  intro: string[];
+  features: DetailFeature[];
+  highlights: { value: string; label: string }[];
+}
+
+export interface BlogSection {
+  heading: string;
+  paragraphs: string[];
+}
+
+export interface BlogDetail {
+  slug: string; // matches BlogPost.slug
+  sections: BlogSection[];
 }
 
 export interface AboutPillar {

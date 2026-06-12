@@ -18,6 +18,8 @@ interface ContactProps {
   lead?: boolean;
 }
 
+type SubmitStatus = "idle" | "sending" | "sent" | "error";
+
 const Contact = ({ lead = false }: ContactProps) => {
   const [form, setForm] = useState<FormState>({
     name: "",
@@ -25,7 +27,7 @@ const Contact = ({ lead = false }: ContactProps) => {
     message: "",
   });
   const [errors, setErrors] = useState<Partial<FormState>>({});
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<SubmitStatus>("idle");
 
   const validate = (): boolean => {
     const next: Partial<FormState> = {};
@@ -43,11 +45,28 @@ const Contact = ({ lead = false }: ContactProps) => {
       if (errors[field]) setErrors((prev) => ({ ...prev, [field]: undefined }));
     };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!validate()) return;
-    // In production this would POST to an API route / CRM.
-    setSubmitted(true);
+    if (!validate() || status === "sending") return;
+    setStatus("sending");
+    try {
+      const res = await fetch(SITE.formEndpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          _subject: `New project request from ${form.name}`,
+          _template: "table",
+          _captcha: "false",
+        }),
+      });
+      if (!res.ok) throw new Error(`Form submit failed: ${res.status}`);
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -69,7 +88,7 @@ const Contact = ({ lead = false }: ContactProps) => {
             </a>
           </div>
 
-          {submitted ? (
+          {status === "sent" ? (
             <div className={styles.success} role="status">
               <span className={styles.successIcon}>
                 <FiCheck />
@@ -125,8 +144,19 @@ const Contact = ({ lead = false }: ContactProps) => {
                 )}
               </div>
 
-              <button type="submit" className={`btn btn-primary ${styles.submit}`}>
-                Submit request
+              {status === "error" && (
+                <span className={styles.error} role="alert">
+                  Something went wrong sending your request. Please try again or
+                  email us directly.
+                </span>
+              )}
+
+              <button
+                type="submit"
+                className={`btn btn-primary ${styles.submit}`}
+                disabled={status === "sending"}
+              >
+                {status === "sending" ? "Sending..." : "Submit request"}
                 <FiArrowRight />
               </button>
             </form>

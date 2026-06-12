@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
 import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 import { PRODUCTS } from "@/lib/content";
@@ -25,7 +26,11 @@ const Products = ({ withHeader = true }: ProductsProps) => {
 
         <div className={styles.grid}>
           {PRODUCTS.map((product) => (
-            <article key={product.id} className={styles.card}>
+            <Link
+              key={product.id}
+              href={`/products/${product.id}`}
+              className={styles.card}
+            >
               <div className={styles.cardTop}>
                 <span className={styles.industry}>{product.industry}</span>
                 <FiArrowUpRight className={styles.arrow} />
@@ -39,7 +44,7 @@ const Products = ({ withHeader = true }: ProductsProps) => {
                   </li>
                 ))}
               </ul>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

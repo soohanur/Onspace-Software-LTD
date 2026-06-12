@@ -5,6 +5,12 @@ export const SITE = {
   shortName: "Onspace",
   tagline: "Custom software development & AI automation agency",
   email: "hello@onspace.software",
+  /**
+   * Free form backend (formsubmit.co) - no signup, no server needed.
+   * Submissions are emailed to this inbox; the first submission sends a
+   * one-time confirmation email that must be approved.
+   */
+  formEndpoint: "https://formsubmit.co/ajax/tj.arnob71@gmail.com",
   phone: "+44 20 0000 0000",
   address: "London, United Kingdom",
   social: {
