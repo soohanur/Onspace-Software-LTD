@@ -6,12 +6,16 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(32px, 5vw, 64px);
-  padding: clamp(32px, 5vw, 56px);
+  padding: clamp(24px, 5vw, 56px);
   border-radius: var(--radius-xl);
   background: var(--sky-50);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-md);
   align-items: center;
+}
+
+.left {
+  min-width: 0;
 }
 
 .kicker {
@@ -29,7 +33,7 @@
   line-height: 1.12;
 }
 
-.lead {
+.leadText {
   margin-top: 16px;
   color: var(--text-muted);
   max-width: 420px;

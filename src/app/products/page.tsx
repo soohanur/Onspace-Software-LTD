@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import PageHeader from "@/components/shared/PageHeader/PageHeader";
 import Products from "@/components/products/Products/Products";
 import TrustedBy from "@/components/shared/TrustedBy/TrustedBy";
 import CtaBand from "@/components/shared/CtaBand/CtaBand";
@@ -13,16 +12,7 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return (
     <>
-      <PageHeader
-        eyebrow="Our Products & Solutions"
-        title={
-          <>
-            <span className="text-gradient">Next-gen softwares</span> across
-            industries
-          </>
-        }
-      />
-      <Products withHeader={false} />
+      <Products lead />
       <TrustedBy />
       <section className="section">
         <div className="container">

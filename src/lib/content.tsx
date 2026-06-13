@@ -97,7 +97,7 @@ import type {
 export const SERVICES: Service[] = [
   {
     id: "ai-automation",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=80",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=900&q=80",
     title: "AI Automation Systems",
     description:
       "Agentic workflows, RAG pipelines and LLM integrations that remove manual work from your operations.",

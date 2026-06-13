@@ -78,7 +78,7 @@ const Contact = ({ lead = false }: ContactProps) => {
             <h2 className={styles.title}>
               Have an idea? Let&apos;s build it together.
             </h2>
-            <p className={styles.lead}>
+            <p className={styles.leadText}>
               Short, focused and free. Tell us what you need and we will get back
               within one business day with next steps.
             </p>

@@ -1,3 +1,7 @@
+.lead {
+  padding-top: calc(var(--nav-height) + clamp(40px, 7vw, 90px));
+}
+
 .grid {
   margin-top: 52px;
   display: grid;

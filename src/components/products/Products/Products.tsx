@@ -6,11 +6,16 @@ import styles from "./Products.module.css";
 
 interface ProductsProps {
   withHeader?: boolean;
+  /** Adds top clearance for the fixed navbar when Products leads a page. */
+  lead?: boolean;
 }
 
-const Products = ({ withHeader = true }: ProductsProps) => {
+const Products = ({ withHeader = true, lead = false }: ProductsProps) => {
   return (
-    <section className="section" id="products">
+    <section
+      className={`section ${lead ? styles.lead : ""}`}
+      id="products"
+    >
       <div className="container">
         {withHeader && (
           <SectionHeader
