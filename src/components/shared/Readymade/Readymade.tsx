@@ -5,14 +5,22 @@ import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 import { READYMADE_CATEGORIES } from "@/lib/content";
 import styles from "./Readymade.module.css";
 
-const Readymade = () => {
+interface ReadymadeProps {
+  /** Adds top clearance for the fixed navbar when Readymade leads a page. */
+  lead?: boolean;
+}
+
+const Readymade = ({ lead = false }: ReadymadeProps) => {
   const [activeId, setActiveId] = useState(READYMADE_CATEGORIES[0].id);
   const active =
     READYMADE_CATEGORIES.find((c) => c.id === activeId) ??
     READYMADE_CATEGORIES[0];
 
   return (
-    <section className="section" id="readymade">
+    <section
+      className={`section ${lead ? styles.lead : ""}`}
+      id="readymade"
+    >
       <div className="container">
         <SectionHeader
           eyebrow="Our Products"

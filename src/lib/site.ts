@@ -22,11 +22,11 @@ export const SITE = {
 };
 
 export const NAV_LINKS: NavLink[] = [
+  { label: "Home", href: "/" },
   { label: "Products", href: "/products" },
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
   { label: "Contact us", href: "/contact" },
-  { label: "Blogs", href: "/blogs", muted: true },
 ];
 
 export const HERO_ROTATING_WORDS = ["business", "enterprise", "startup"];

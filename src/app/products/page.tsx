@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import Products from "@/components/products/Products/Products";
+import Readymade from "@/components/shared/Readymade/Readymade";
 import TrustedBy from "@/components/shared/TrustedBy/TrustedBy";
 import CtaBand from "@/components/shared/CtaBand/CtaBand";
 
 export const metadata: Metadata = {
-  title: "Products & Solutions",
+  title: "Products",
   description:
-    "Next-gen software products and solutions built by Onspace across operations, e-commerce, fintech and healthcare.",
+    "Ready-made software products by Onspace - ERP, HRM, POS, e-commerce, healthcare and fintech solutions you can launch fast.",
 };
 
 export default function ProductsPage() {
   return (
     <>
-      <Products lead />
+      <Readymade lead />
       <TrustedBy />
       <section className="section">
         <div className="container">
