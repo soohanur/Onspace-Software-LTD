@@ -98,6 +98,15 @@ const Navbar = () => {
       />
 
       <aside className={`${styles.mobile} ${open ? styles.mobileOpen : ""}`}>
+        <button
+          type="button"
+          className={styles.close}
+          aria-label="Close menu"
+          onClick={() => setOpen(false)}
+        >
+          <FiX />
+        </button>
+
         <ul className={styles.mobileMenu}>
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
