@@ -8,7 +8,7 @@
   gap: clamp(32px, 5vw, 64px);
   padding: clamp(24px, 5vw, 56px);
   border-radius: var(--radius-xl);
-  background: var(--sky-50);
+  background: #fafafa;
   border: 1px solid var(--border);
   box-shadow: var(--shadow-md);
   align-items: center;
@@ -22,7 +22,7 @@
   display: inline-block;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--blue-600);
+  color: #929292;
 }
 
 .title {
