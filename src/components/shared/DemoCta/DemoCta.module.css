@@ -89,8 +89,8 @@
 @media (max-width: 560px) {
   .perks {
     flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: 8px;
+    justify-content: center;
+    gap: 14px;
   }
   .perk {
     gap: 7px;
