@@ -90,7 +90,13 @@ const Navbar = () => {
         </button>
       </nav>
 
-      <div className={`${styles.mobile} ${open ? styles.mobileOpen : ""}`}>
+      <div
+        className={`${styles.scrim} ${open ? styles.scrimOpen : ""}`}
+        onClick={() => setOpen(false)}
+        aria-hidden="true"
+      />
+
+      <aside className={`${styles.mobile} ${open ? styles.mobileOpen : ""}`}>
         <ul className={styles.mobileMenu}>
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
@@ -109,7 +115,7 @@ const Navbar = () => {
         <Link href="/contact" className="btn btn-primary">
           Talk to an expert
         </Link>
-      </div>
+      </aside>
     </header>
   );
 };

@@ -38,9 +38,6 @@ const Hero = () => {
             Get your custom demo
             <FiArrowRight />
           </Link>
-          <Link href="/services" className="btn btn-secondary">
-            Explore services
-          </Link>
         </div>
 
         <dl className={styles.stats}>
