@@ -4,7 +4,6 @@
   padding-bottom: clamp(32px, 5vw, 56px);
   text-align: center;
   background: var(--bg);
-  border-bottom: 1px solid var(--border);
   overflow: hidden;
 }
 
