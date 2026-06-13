@@ -85,3 +85,26 @@
     margin-inline: auto;
   }
 }
+
+@media (max-width: 560px) {
+  .perks {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .perk {
+    gap: 7px;
+  }
+  .perkIcon {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+    border-width: 1.5px;
+  }
+  .perkLabel {
+    font-size: 0.95rem;
+  }
+  .perkSub {
+    font-size: 0.6rem;
+  }
+}
