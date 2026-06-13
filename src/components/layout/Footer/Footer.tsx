@@ -35,13 +35,14 @@ const Footer = () => {
         <div className={styles.top}>
           <div className={styles.brandCol}>
             <Link href="/" className={styles.brand}>
-              <span className={styles.logoMark} aria-hidden="true">
-                <span className={styles.logoDot} />
-              </span>
-              <span>
-                {SITE.shortName}
-                <span className={styles.brandAccent}>space</span>
-              </span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/onspace-logo.png"
+                alt=""
+                className={styles.logoMark}
+                aria-hidden="true"
+              />
+              <span>{SITE.shortName}</span>
             </Link>
             <p className={styles.blurb}>
               Custom software development and AI automation systems for business,

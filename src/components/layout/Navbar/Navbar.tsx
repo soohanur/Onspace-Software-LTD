@@ -48,13 +48,14 @@ const Navbar = () => {
         aria-label="Primary"
       >
         <Link href="/" className={styles.brand} aria-label={`${SITE.name} home`}>
-          <span className={styles.logoMark} aria-hidden="true">
-            <span className={styles.logoDot} />
-          </span>
-          <span className={styles.brandText}>
-            {SITE.shortName}
-            <span className={styles.brandAccent}>space</span>
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/onspace-logo.png"
+            alt=""
+            className={styles.logoMark}
+            aria-hidden="true"
+          />
+          <span className={styles.brandText}>{SITE.shortName}</span>
         </Link>
 
         <ul className={styles.menu}>
