@@ -9,7 +9,10 @@ interface ServicesProps {
 
 const Services = ({ withHeader = true }: ServicesProps) => {
   return (
-    <section className="section" id="services">
+    <section
+      className={`section ${withHeader ? "" : styles.flush}`}
+      id="services"
+    >
       <div className="container">
         {withHeader && (
           <SectionHeader
@@ -22,7 +25,7 @@ const Services = ({ withHeader = true }: ServicesProps) => {
           />
         )}
 
-        <div className={styles.bentoWrap}>
+        <div className={withHeader ? styles.bentoWrap : ""}>
           <MagicBento
             cards={SERVICES}
             enableStars={false}

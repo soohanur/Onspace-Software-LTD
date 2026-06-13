@@ -1,3 +1,9 @@
 .bentoWrap {
   margin-top: 52px;
 }
+
+/* When the section header is hidden (e.g. Services page under PageHeader),
+   drop the top padding so the cards sit closer to the page title. */
+.flush {
+  padding-top: 0;
+}
