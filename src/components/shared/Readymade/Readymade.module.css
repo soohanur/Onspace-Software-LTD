@@ -36,8 +36,6 @@
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    margin-inline: calc(-1 * var(--container-pad));
-    padding-inline: var(--container-pad);
   }
   .tabs::-webkit-scrollbar {
     display: none;
